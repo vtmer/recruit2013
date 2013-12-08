@@ -1,0 +1,10 @@
+{
+  "name": "recruit2013",
+  "version": "0.0.0",
+  "dependencies": {
+    "lxjwltwebapp": "~0.0.0",
+    "normalize-css": "~2.1.3",
+    "jquery": "=1.10.2"
+  }
+}
+

@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+// *****************************
+// Predefine
+// *****************************
+
+
+// firfox hack
+@mixin apply-to-firefox {
+	@-moz-document url-prefix(){
+		@content;
+	}
+}
+
+
+// ie hack
+@mixin apply-to-ie($ie: lte9) {
+	.#{$ie}{
+		@content;
+	}
+}
+
+
+// clearfix
+%clearfix:before,
+%clearfix:after{
+	display:block;
+	visibility:hidden;
+	height:0;
+	content:'';
+}
+%clearfix:after {
+	clear: both;
+}
+%clearfix {*zoom: 1;} // IE < 8
+@mixin clearfix {
+	&{
+		@extend %clearfix;
+	}
+}
+
+
+// selection
+// 设置选中文本高亮色
+@mixin selection($background: #fe57a1, $color: #fff, $text-shadow: none) {
+	::selection{
+	    background: $background;
+	    color: $color;
+	    text-shadow: $text-shadow;
+	}
+	::-moz-selection{
+	    background: $background;
+	    color: $color;
+	    text-shadow: $text-shadow;
+	}
+}
+
+
+// text-hide
+%text-hide {
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+	text-decoration: none;
+}
+@mixin text-hide{
+	&{
+		@extend %text-hide;
+	}
+}
+
+
+// arrow
+%arrow {
+	display: block;
+	width:0px;
+	height:0px;
+	border-style: dashed;
+	border-color: transparent;
+}
+@mixin arrow($direction, $width, $color: #000) {
+	@if ($direction == left) {
+		$direction: right;
+	} @else if($direction == right) {
+		$direction: left;
+	} @else if($direction == top) {
+		$direction: bottom;
+	} @else if($direction == bottom) {
+		$direction: top;
+	}
+
+	& {
+		@extend %arrow;
+	}
+	border-width: $width;
+	border-#{$direction}-color: $color;
+	border-#{$direction}-style: solid;
+}
+
+
+// box-shadow
+@mixin box-shadow($value...) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
+}
+
+
+// background-size
+@mixin background-size($value: auto) {
+	-webkit-background-size: $value;
+	-moz-background-size: $value;
+	-o-background-size: $value;
+	background-size: $value;
+}
+
+
+// gradient
+@mixin gradient($direction: top, $color-start: rgba(#fff, 0), $color-stop: rgba(#fff, 0)) {
+	@if ($direction == left) {
+		filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',GradientType=1,startColorstr=#{ie-hex-str($color-start)}, endColorstr=#{ie-hex-str($color-stop)});
+	}@else if ($direction == top) {
+		filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',GradientType=0,startColorstr=#{ie-hex-str($color-start)}, endColorstr=#{ie-hex-str($color-stop)});
+	}
+	background-image:-webkit-linear-gradient($direction, $color-start, $color-stop);
+	background-image:-moz-linear-gradient($direction, $color-start, $color-stop);
+	background-image:-o-linear-gradient($direction, $color-start, $color-stop);
+}
+
+
+// border-radius
+@mixin border-radius($value: 0) {
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+
+// transition
+@mixin transition($value...) {
+	-webkit-transition: $value;
+	-moz-transition: $value;
+	-o-transition: $value;
+	-ms-transition: $value;
+	transition: $value;
+}
+
+
+// text-overflow
+%text-overflow{
+	display: block;
+	-o-text-overflow: ellipsis;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+}
+@mixin text-overflow {
+	&{
+		@extend %text-overflow;
+	}
+}
+
+
+// box-sizing
+@mixin box-sizing($value: content-box) {
+	-webkit-box-sizing: $value;
+	-moz-box-sizing: $value;
+	box-sizing: $value;
+}
+
+
+// display-box
+%display-box {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+}
+@mixin display-box {
+	&{
+		@extend %display-box;
+	}
+}
+
+
+// box-flex
+@mixin box-flex($value: 0) {
+	-moz-box-flex: $value;
+	-webkit-box-flex: $value;
+	box-flex: $value;
+}
+
+
+// background-rgba
+@mixin background-rgba($color: #fff, $alpha: 0.0) {
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',GradientType=1,startColorstr=#{ie-hex-str(rgba($color, $alpha))}, endColorstr=#{ie-hex-str(rgba($color, $alpha))});
+	background-color: rgba($color, $alpha);
+}
+
+
+// font-face
+@mixin font-face($fontName, $dir: '../fonts/') {
+	@font-face {
+		font-family: $fontName;
+		src: url('#{$dir}#{$fontName}.eot?') format('eot'); // ie
+		src:url('#{$dir}#{$fontName}.woff') format('woff'), url('#{$dir}#{$fontName}.ttf') format('truetype');// non-IE
+	}
+}
+
+
+// transform
+@mixin transform($value: scale(1) translate(0, 0) rotate(0deg)) {
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-o-transform: $value;
+	-ms-transform: $value;
+	transform: $value;
+}
+
+
+// transform-origin
+@mixin transform-origin($value: center center) {
+	-webkit-transform-origin: $value;
+	-moz-transform-origin: $value;
+	-o-transform-origin: $value;
+	-ms-transform-origin: $value;
+	transform-origin: $value;
+}
