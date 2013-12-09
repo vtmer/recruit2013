@@ -1,5 +1,4 @@
-@charset 'utf-8';
-@import 'predefine';
+@charset "utf-8";
 
 /*------------------------------------*\
     $CONTENTS
@@ -14,9 +13,21 @@
 
 
 /*------------------------------------*\
-    $GLOBAL-CSS
+    $SCSS-SET
 \*------------------------------------*/
-@import 'normalize.css';
+@import "predefine";
+@import "compass/utilities/sprites";
+$icons-layout:smart;
+@import "icons/*.png";
+
+
+
+
+
+/*------------------------------------*\
+    $NORMALIZE-CSS
+\*------------------------------------*/
+@import "reset.css";
 
 
 
@@ -24,6 +35,103 @@
 /*------------------------------------*\
     $COMMAN
 \*------------------------------------*/
+$page-space: 40px;
+$group-main-width: 1026px;
+$group-main-height: 627px;
+$index-overall: 1000;
+
+html {
+    position: relative;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.no-js html,
+.no-js body {
+    overflow: auto;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.slide-block {
+    width: 100%;
+    height: 100%;
+}
+
+%block {
+    width: 100%;
+    min-width: $group-main-width;
+    height: 100%;
+//    min-height: $groud-main-height;
+    overflow: hidden;
+    position: relative;
+}
+
+%block-main {
+    width: $group-main-width;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+@mixin block-main($height) {
+    @extend %block-main;
+    height: $height;
+}
+
+%intro {
+    width: 556px;
+    position: absolute;
+    font-size: 14px;
+    color: #e6e6e6;
+}
+@mixin intro($left, $top) {
+    @extend %intro;
+    left: $left;
+    top: $top;
+}
+
+.intro-summary {
+    margin-top: 1.8em;
+}
+
+/**
+* 1. 宽度减去padding和border的双边距离之和
+* 2. 向左推进padding和border的单边距离之和
+*/
+%group-requirement {
+    width: 556px - (13px + 3px) * 2; /* 1 */
+    position: absolute;
+    left: 394px - (13px + 3px); /* 2 */
+    bottom: 90px;
+    border-style: dashed;
+    border-width: 3px;
+    padding: 8px 13px;
+    font-size: 13px;
+
+    ul {
+        padding-left: 5em;
+        position: relative;
+    }
+
+    ul>li:first-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+@mixin group-requirement($color, $border-color) {
+    @extend %group-requirement;
+    border-color: $border-color;
+    color: $color;
+}
 
 
 
@@ -34,6 +142,85 @@
     $NAV
 \*------------------------------------*/
 
+/**
+* 1. 高度为 六个按钮的高度之和 加上 margin的五个叠加间隔
+*/
+.nav {
+    height: 24px * 6 + 10px * 5; /* 1 */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 30px;
+    z-index: $index-overall;
+    margin: auto 0;
+
+//    .no-js & {
+//        display: none;
+//    }
+
+    li {
+        margin-top: 10px;
+    }
+
+    li:first-child {
+        margin-top: 0;
+    }
+
+    a {
+        @include text-hide;
+        width: 25px;
+        height: 24px;
+    }
+}
+
+.to-header a {
+    @include icons-sprite('to-header');
+
+    &:hover, &.action{
+        @include icons-sprite('to-header-hover');
+    }
+}
+
+.to-ui-design a {
+    @include icons-sprite('to-ui-design');
+
+    &:hover, &.action{
+        @include icons-sprite('to-ui-design-hover');
+    }
+}
+
+.to-back-end a {
+    @include icons-sprite('to-back-end');
+
+    &:hover, &.action{
+        @include icons-sprite('to-back-end-hover');
+    }
+}
+
+.to-front-end a {
+    @include icons-sprite('to-front-end');
+
+    &:hover, &.action{
+        @include icons-sprite('to-front-end-hover');
+    }
+}
+
+.to-mobility a {
+    @include icons-sprite('to-mobility');
+
+    &:hover, &.action{
+        @include icons-sprite('to-mobility-hover');
+    }
+}
+
+.to-contact a {
+    @include icons-sprite('to-contact');
+
+    &:hover, &.action{
+        @include icons-sprite('to-contact-hover');
+    }
+}
+
 
 
 
@@ -41,3 +228,250 @@
 /*------------------------------------*\
     $HEADER
 \*------------------------------------*/
+.header {
+    @extend %block;
+    background-color: #f2b701;
+}
+
+.logo {
+    @include text-hide;
+    @include icons-sprite('logo', true);
+    position: absolute;
+    left: $page-space;
+    top: $page-space;
+}
+
+.follow-us {
+    @include text-hide;
+    @include icons-sprite('follow-us', true);
+    position: absolute;
+    left: $page-space;
+    bottom: $page-space;
+}
+
+.header-main {
+    @include block-main($height: 200px);
+    text-align: center;
+    color: #222;
+}
+
+.header-main h1 {
+    font-family: 'impact';
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.header-main h2 {
+    font-family: 'Microsoft YaHei';
+    font-size: 38px;
+    font-weight: bold;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $UI-DESIGN
+\*------------------------------------*/
+.ui-design {
+    @extend %block;
+    line-height: 2em;
+    background-color: #e57d04;
+}
+
+.ui-design-main {
+    @include block-main($height: $group-main-height);
+    background: right top url('../images/ui-design.png') no-repeat;
+}
+
+.ui-design-intro {
+    @include intro($left: 394px, $top: 180px);
+}
+
+.ui-design-requirement {
+    @include group-requirement($color: #fec99b, $border-color: #d24c0a);
+}
+
+
+
+
+
+/*------------------------------------*\
+    $BACK-END
+\*------------------------------------*/
+.back-end {
+    @extend %block;
+    line-height: 2em;
+    background-color: #7c378a;
+}
+
+.back-end-main {
+    @include block-main($height: $group-main-height);
+    background: right top url('../images/back-end.png') no-repeat;
+}
+
+.back-end-intro {
+    @include intro($left: 394px, $top: 180px);
+}
+
+.back-end-requirement {
+    @include group-requirement($color: #b981d1, $border-color: #3d1b48);
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FRONT-END
+\*------------------------------------*/
+.front-end {
+    @extend %block;
+    line-height: 2em;
+    background-color: #3465aa;
+}
+
+.front-end-main {
+    @include block-main($height: $group-main-height);
+    background: right top url('../images/front-end.png') no-repeat;
+}
+
+.front-end-intro {
+    @include intro($left: 394px, $top: 180px);
+}
+
+.front-end-requirement {
+    @include group-requirement($color: #7ca0c5, $border-color: #193265);
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MOBILITY
+\*------------------------------------*/
+.mobility {
+    @extend %block;
+    line-height: 2em;
+    background-color: #09a275;
+}
+
+.mobility-main {
+    @include block-main($height: $group-main-height);
+    background: right top url('../images/mobility.png') no-repeat;
+}
+
+.mobility-intro {
+    @include intro($left: 394px, $top: 180px);
+}
+
+.mobility-requirement {
+    @include group-requirement($color: #6ccdb3, $border-color: #045e39);
+}
+
+
+
+
+
+/*------------------------------------*\
+    $CONTACT
+\*------------------------------------*/
+.contact {
+    @extend %block;
+    line-height: 2em;
+    background: left bottom #7cb854 url('../images/contact-bg.png') repeat-x;
+}
+
+.contact-main {
+    @include block-main($height: 434px);
+    width: 961px;
+    background: right top url('../images/contact.png') no-repeat;
+    color: #f3bb01;
+    bottom: auto;
+    top: 78px;
+}
+
+.vtmer-intro {
+    @include intro($left: 360px, $top: 48px);
+    color: #f3bb01;
+}
+
+.about-us {
+    position: absolute;
+    left: 72px;
+    bottom: 42px;
+    font-size: 13px;
+}
+
+.about-us a {
+    color: #f3bb01;
+}
+
+.form-download {
+    @include text-hide;
+    @include icons-sprite('form-download', true);
+    position: absolute;
+    left: 360px;
+    bottom: 42px;
+}
+
+.figure {
+    display: none;
+    width: $group-main-width;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 26px;
+    margin: 0 auto;
+
+    li {
+        display: inline-block;
+        margin-left: 140px;
+
+        &:first-child {
+            margin-left: 20px;
+        }
+    }
+
+    a {
+        @include text-hide;
+    }
+
+    @media screen and (min-height: 768px) {
+        display: block;
+    }
+}
+
+.ui-design-figure a{
+    @include icons-sprite('ui-design-figure', true);
+
+    &:hover {
+        @include icons-sprite('ui-design-figure-hover', true);
+    }
+}
+
+.back-end-figure a{
+    @include icons-sprite('back-end-figure', true);
+
+    &:hover {
+        @include icons-sprite('back-end-figure-hover', true);
+    }
+}
+
+.front-end-figure a{
+    @include icons-sprite('front-end-figure', true);
+
+    &:hover {
+        @include icons-sprite('front-end-figure-hover', true);
+    }
+}
+
+.mobility-figure a{
+    @include icons-sprite('mobility-figure', true);
+
+    &:hover {
+        @include icons-sprite('mobility-figure-hover', true);
+    }
+}

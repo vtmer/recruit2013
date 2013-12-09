@@ -1,5 +1,5 @@
-@charset "GBK";
-@import url(normalize.css);
+@charset "UTF-8";
+@import url(reset.css);
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
@@ -8,14 +8,483 @@
  * NORMALIZE-CSS..........Import normalize css
  */
 /*------------------------------------*\
-    $GLOBAL-CSS
+    $SCSS-SET
+\*------------------------------------*/
+/* line 60, ../scss/_predefine.scss */
+.nav a, .logo, .follow-us, .form-download, .figure a {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+}
+
+/* line 218, icons/*.png */
+.icons-sprite, .to-header a, .to-header a:hover, .to-header a.action, .to-ui-design a, .to-ui-design a:hover, .to-ui-design a.action, .to-back-end a, .to-back-end a:hover, .to-back-end a.action, .to-front-end a, .to-front-end a:hover, .to-front-end a.action, .to-mobility a, .to-mobility a:hover, .to-mobility a.action, .to-contact a, .to-contact a:hover, .to-contact a.action, .logo, .follow-us, .form-download, .ui-design-figure a, .ui-design-figure a:hover, .back-end-figure a, .back-end-figure a:hover, .front-end-figure a, .front-end-figure a:hover, .mobility-figure a, .mobility-figure a:hover {
+  background: url('../images/icons-s4fe1411c75.png') no-repeat;
+}
+
+/*------------------------------------*\
+    $NORMALIZE-CSS
 \*------------------------------------*/
 /*------------------------------------*\
     $COMMAN
 \*------------------------------------*/
+/* line 43, ../scss/index.scss */
+html {
+  position: relative;
+}
+
+/* line 47, ../scss/index.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 53, ../scss/index.scss */
+.no-js html,
+.no-js body {
+  overflow: auto;
+}
+
+/* line 57, ../scss/index.scss */
+a {
+  text-decoration: underline;
+}
+
+/* line 61, ../scss/index.scss */
+.slide-block {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 66, ../scss/index.scss */
+.header, .ui-design, .back-end, .front-end, .mobility, .contact {
+  width: 100%;
+  min-width: 1026px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 75, ../scss/index.scss */
+.header-main, .ui-design-main, .back-end-main, .front-end-main, .mobility-main, .contact-main {
+  width: 1026px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 89, ../scss/index.scss */
+.ui-design-intro, .back-end-intro, .front-end-intro, .mobility-intro, .vtmer-intro {
+  width: 556px;
+  position: absolute;
+  font-size: 14px;
+  color: #e6e6e6;
+}
+
+/* line 101, ../scss/index.scss */
+.intro-summary {
+  margin-top: 1.8em;
+}
+
+/**
+* 1. 宽度减去padding和border的双边距离之和
+* 2. 向左推进padding和border的单边距离之和
+*/
+/* line 109, ../scss/index.scss */
+.ui-design-requirement, .back-end-requirement, .front-end-requirement, .mobility-requirement {
+  width: 524px;
+  /* 1 */
+  position: absolute;
+  left: 378px;
+  /* 2 */
+  bottom: 90px;
+  border-style: dashed;
+  border-width: 3px;
+  padding: 8px 13px;
+  font-size: 13px;
+}
+/* line 119, ../scss/index.scss */
+.ui-design-requirement ul, .back-end-requirement ul, .front-end-requirement ul, .mobility-requirement ul {
+  padding-left: 5em;
+  position: relative;
+}
+/* line 124, ../scss/index.scss */
+.ui-design-requirement ul > li:first-child, .back-end-requirement ul > li:first-child, .front-end-requirement ul > li:first-child, .mobility-requirement ul > li:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 /*------------------------------------*\
     $NAV
 \*------------------------------------*/
+/**
+* 1. 高度为 六个按钮的高度之和 加上 margin的五个叠加间隔
+*/
+/* line 148, ../scss/index.scss */
+.nav {
+  height: 194px;
+  /* 1 */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  z-index: 1000;
+  margin: auto 0;
+}
+/* line 161, ../scss/index.scss */
+.nav li {
+  margin-top: 10px;
+}
+/* line 165, ../scss/index.scss */
+.nav li:first-child {
+  margin-top: 0;
+}
+/* line 169, ../scss/index.scss */
+.nav a {
+  width: 25px;
+  height: 24px;
+}
+
+/* line 176, ../scss/index.scss */
+.to-header a {
+  background-position: -50px 0;
+}
+/* line 179, ../scss/index.scss */
+.to-header a:hover, .to-header a.action {
+  background-position: 0 -24px;
+}
+
+/* line 184, ../scss/index.scss */
+.to-ui-design a {
+  background-position: -75px -24px;
+}
+/* line 187, ../scss/index.scss */
+.to-ui-design a:hover, .to-ui-design a.action {
+  background-position: -100px -24px;
+}
+
+/* line 192, ../scss/index.scss */
+.to-back-end a {
+  background-position: -100px 0;
+}
+/* line 195, ../scss/index.scss */
+.to-back-end a:hover, .to-back-end a.action {
+  background-position: -75px 0;
+}
+
+/* line 200, ../scss/index.scss */
+.to-front-end a {
+  background-position: -25px -24px;
+}
+/* line 203, ../scss/index.scss */
+.to-front-end a:hover, .to-front-end a.action {
+  background-position: -50px -24px;
+}
+
+/* line 208, ../scss/index.scss */
+.to-mobility a {
+  background-position: -25px 0;
+}
+/* line 211, ../scss/index.scss */
+.to-mobility a:hover, .to-mobility a.action {
+  background-position: -125px 0;
+}
+
+/* line 216, ../scss/index.scss */
+.to-contact a {
+  background-position: 0 0;
+}
+/* line 219, ../scss/index.scss */
+.to-contact a:hover, .to-contact a.action {
+  background-position: -135px -560px;
+}
+
 /*------------------------------------*\
     $HEADER
 \*------------------------------------*/
+/* line 231, ../scss/index.scss */
+.header {
+  background-color: #f2b701;
+}
+
+/* line 236, ../scss/index.scss */
+.logo {
+  background-position: 0 -52px;
+  height: 60px;
+  width: 120px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+/* line 244, ../scss/index.scss */
+.follow-us {
+  background-position: -125px -24px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+
+/* line 252, ../scss/index.scss */
+.header-main {
+  height: 200px;
+  text-align: center;
+  color: #222;
+}
+
+/* line 258, ../scss/index.scss */
+.header-main h1 {
+  font-family: 'impact';
+  font-size: 100px;
+  text-transform: uppercase;
+}
+
+/* line 264, ../scss/index.scss */
+.header-main h2 {
+  font-family: 'Microsoft YaHei';
+  font-size: 38px;
+  font-weight: bold;
+}
+
+/*------------------------------------*\
+    $UI-DESIGN
+\*------------------------------------*/
+/* line 277, ../scss/index.scss */
+.ui-design {
+  line-height: 2em;
+  background-color: #e57d04;
+}
+
+/* line 283, ../scss/index.scss */
+.ui-design-main {
+  height: 627px;
+  background: right top url("../images/ui-design.png") no-repeat;
+}
+
+/* line 288, ../scss/index.scss */
+.ui-design-intro {
+  left: 394px;
+  top: 180px;
+}
+
+/* line 292, ../scss/index.scss */
+.ui-design-requirement {
+  border-color: #d24c0a;
+  color: #fec99b;
+}
+
+/*------------------------------------*\
+    $BACK-END
+\*------------------------------------*/
+/* line 303, ../scss/index.scss */
+.back-end {
+  line-height: 2em;
+  background-color: #7c378a;
+}
+
+/* line 309, ../scss/index.scss */
+.back-end-main {
+  height: 627px;
+  background: right top url("../images/back-end.png") no-repeat;
+}
+
+/* line 314, ../scss/index.scss */
+.back-end-intro {
+  left: 394px;
+  top: 180px;
+}
+
+/* line 318, ../scss/index.scss */
+.back-end-requirement {
+  border-color: #3d1b48;
+  color: #b981d1;
+}
+
+/*------------------------------------*\
+    $FRONT-END
+\*------------------------------------*/
+/* line 329, ../scss/index.scss */
+.front-end {
+  line-height: 2em;
+  background-color: #3465aa;
+}
+
+/* line 335, ../scss/index.scss */
+.front-end-main {
+  height: 627px;
+  background: right top url("../images/front-end.png") no-repeat;
+}
+
+/* line 340, ../scss/index.scss */
+.front-end-intro {
+  left: 394px;
+  top: 180px;
+}
+
+/* line 344, ../scss/index.scss */
+.front-end-requirement {
+  border-color: #193265;
+  color: #7ca0c5;
+}
+
+/*------------------------------------*\
+    $MOBILITY
+\*------------------------------------*/
+/* line 355, ../scss/index.scss */
+.mobility {
+  line-height: 2em;
+  background-color: #09a275;
+}
+
+/* line 361, ../scss/index.scss */
+.mobility-main {
+  height: 627px;
+  background: right top url("../images/mobility.png") no-repeat;
+}
+
+/* line 366, ../scss/index.scss */
+.mobility-intro {
+  left: 394px;
+  top: 180px;
+}
+
+/* line 370, ../scss/index.scss */
+.mobility-requirement {
+  border-color: #045e39;
+  color: #6ccdb3;
+}
+
+/*------------------------------------*\
+    $CONTACT
+\*------------------------------------*/
+/* line 381, ../scss/index.scss */
+.contact {
+  line-height: 2em;
+  background: left bottom #7cb854 url("../images/contact-bg.png") repeat-x;
+}
+
+/* line 387, ../scss/index.scss */
+.contact-main {
+  height: 434px;
+  width: 961px;
+  background: right top url("../images/contact.png") no-repeat;
+  color: #f3bb01;
+  bottom: auto;
+  top: 78px;
+}
+
+/* line 396, ../scss/index.scss */
+.vtmer-intro {
+  left: 360px;
+  top: 48px;
+  color: #f3bb01;
+}
+
+/* line 401, ../scss/index.scss */
+.about-us {
+  position: absolute;
+  left: 72px;
+  bottom: 42px;
+  font-size: 13px;
+}
+
+/* line 408, ../scss/index.scss */
+.about-us a {
+  color: #f3bb01;
+}
+
+/* line 412, ../scss/index.scss */
+.form-download {
+  background-position: 0 -112px;
+  height: 70px;
+  width: 168px;
+  position: absolute;
+  left: 360px;
+  bottom: 42px;
+}
+
+/* line 420, ../scss/index.scss */
+.figure {
+  display: none;
+  width: 1026px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 26px;
+  margin: 0 auto;
+}
+/* line 429, ../scss/index.scss */
+.figure li {
+  display: inline-block;
+  margin-left: 140px;
+}
+/* line 433, ../scss/index.scss */
+.figure li:first-child {
+  margin-left: 20px;
+}
+@media screen and (min-height: 768px) {
+  /* line 420, ../scss/index.scss */
+  .figure {
+    display: block;
+  }
+}
+
+/* line 447, ../scss/index.scss */
+.ui-design-figure a {
+  background-position: 0 -371px;
+  height: 189px;
+  width: 157px;
+}
+/* line 450, ../scss/index.scss */
+.ui-design-figure a:hover {
+  background-position: 0 -182px;
+  height: 189px;
+  width: 157px;
+}
+
+/* line 455, ../scss/index.scss */
+.back-end-figure a {
+  background-position: 0 -1340px;
+  height: 200px;
+  width: 148px;
+}
+/* line 458, ../scss/index.scss */
+.back-end-figure a:hover {
+  background-position: 0 -1540px;
+  height: 200px;
+  width: 148px;
+}
+
+/* line 463, ../scss/index.scss */
+.front-end-figure a {
+  background-position: 0 -950px;
+  height: 195px;
+  width: 133px;
+}
+/* line 466, ../scss/index.scss */
+.front-end-figure a:hover {
+  background-position: 0 -1145px;
+  height: 195px;
+  width: 133px;
+}
+
+/* line 471, ../scss/index.scss */
+.mobility-figure a {
+  background-position: 0 -560px;
+  height: 195px;
+  width: 135px;
+}
+/* line 474, ../scss/index.scss */
+.mobility-figure a:hover {
+  background-position: 0 -755px;
+  height: 195px;
+  width: 135px;
+}

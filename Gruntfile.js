@@ -164,7 +164,7 @@ module.exports = function(grunt) {
 
 		compass: {
 			options: {
-				debugInfo: true,
+				// debugInfo: true,
 				imagesDir: '<%= yeoman.app %>/images',
 				httpGeneratedImagesPath: '../images'
 			},
