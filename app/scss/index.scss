@@ -55,6 +55,10 @@ html, body {
 html {
     position: relative;
     font-size: 62.5%;
+
+//    @media screen and (max-width: 670px) {
+//        font-size: 31.25%;
+//    }
 }
 
 body {
@@ -78,6 +82,7 @@ a {
 %block {
     width: 100%;
     height: 100%;
+    line-height: 1.7;
     overflow: hidden;
     position: relative;
 
@@ -102,7 +107,6 @@ a {
     @media screen and (max-width: #{$group-main-width}) {
         width: 90%;
         height: auto;
-        line-height: 5rem;
         position: static;
         background-image: none;
     }
@@ -117,7 +121,7 @@ a {
         @include icons-sprite($sprite + '-big', false, -9999px);
         position: absolute;
         left: 390px;
-        top: 114px;
+        top: 88px;
         font-size: 40px;
         color: #fff;
 
@@ -126,7 +130,7 @@ a {
             @include icons-sprite($sprite, true);
             position: absolute;
             left: 100%;
-            bottom: -12px;
+            bottom: 10px;
             margin-left: 6px;
         }
     }
@@ -141,7 +145,6 @@ a {
     @media screen and (max-width: #{$group-main-width}) {
         width: 90%;
         height: auto;
-        line-height: 5rem;
         position: static;
         margin-bottom: 30px;
         background-image: none;
@@ -177,7 +180,7 @@ a {
     @media screen and (max-width: #{$group-main-width}) {
         width: 100%;
         position: static;
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -223,10 +226,10 @@ a {
         width: auto;
         position: static;
         margin: 60px 0;
-        font-size: 2.6rem;
+        font-size: 1.4rem;
 
         h4 {
-            font-size: 3rem;
+            font-size: 1.5rem;
             font-weight: bold;
         }
     }
@@ -384,7 +387,7 @@ a {
 }
 
 .header-main {
-    @include block-main($height: 200px);
+    @include block-main($height: 250px);
     text-align: center;
     color: #222;
 
@@ -396,23 +399,23 @@ a {
     @media screen and (max-width: 670px) {
         position: static;
         height: auto;
-        margin: 2rem auto;
+        margin: 20px auto 30px;
     }
 
 }
 
 .header-main h1 {
-    line-height: 1.5em;
+    line-height: 1.5;
     font-family: 'impact';
     font-size: 100px;
     text-transform: uppercase;
 
     @media screen and (max-width: #{$group-main-width}) {
-        font-size: 10.6rem;
+        font-size: 10rem;
     }
 
     @media screen and (max-width: 670px) {
-        line-height: 1.2em;
+        line-height: 1.2;
     }
 }
 
@@ -426,7 +429,7 @@ a {
     }
 
     @media screen and (max-width: 670px) {
-        line-height: 1.2em;
+        line-height: 1.2;
     }
 }
 
@@ -439,7 +442,6 @@ a {
 \*------------------------------------*/
 .ui-design {
     @extend %block;
-    line-height: 2em;
     background-color: #e57d04;
 }
 
@@ -474,7 +476,6 @@ a {
 \*------------------------------------*/
 .back-end {
     @extend %block;
-    line-height: 2em;
     background-color: #7c378a;
 }
 
@@ -509,7 +510,6 @@ a {
 \*------------------------------------*/
 .front-end {
     @extend %block;
-    line-height: 2em;
     background-color: #3465aa;
 }
 
@@ -544,7 +544,6 @@ a {
 \*------------------------------------*/
 .mobility {
     @extend %block;
-    line-height: 2em;
     background-color: #09a275;
 }
 
@@ -579,7 +578,6 @@ a {
 \*------------------------------------*/
 .contact {
     @extend %block;
-    line-height: 2em;
     background: left bottom #7cb854 url('../images/contact-bg.png') repeat-x;
 
     @media screen and (max-width: #{$group-main-width}) {
@@ -623,7 +621,7 @@ a {
             position: static;
             margin: 0 auto;
             margin-bottom: 40px;
-            font-size: 11rem;
+            font-size: 6rem;
         }
     }
 }

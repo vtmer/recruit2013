@@ -35,7 +35,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="222" selection-start="849" selection-end="849" vertical-scroll-proportion="0.8508287" vertical-offset="0" max-vertical-offset="5456">
+            <state line="12" column="130" selection-start="757" selection-end="757" vertical-scroll-proportion="0.6077348" vertical-offset="132" max-vertical-offset="5478">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="index.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="240" column="9" selection-start="4476" selection-end="4476" vertical-scroll-proportion="-4.728395" vertical-offset="4897" max-vertical-offset="16720">
+            <state line="77" column="16" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-20.91358" vertical-offset="0" max-vertical-offset="16676">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1125" column="0" selection-start="24659" selection-end="24659" vertical-scroll-proportion="-63.36" vertical-offset="23166" max-vertical-offset="24882">
+            <state line="1115" column="0" selection-start="24447" selection-end="24447" vertical-scroll-proportion="-63.36" vertical-offset="22946" max-vertical-offset="24662">
               <folding />
             </state>
           </provider>
@@ -350,7 +350,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1125" column="0" selection-start="24659" selection-end="24659" vertical-scroll-proportion="-63.36" vertical-offset="23166" max-vertical-offset="24882">
+        <state line="1115" column="0" selection-start="24447" selection-end="24447" vertical-scroll-proportion="-63.36" vertical-offset="22946" max-vertical-offset="24662">
           <folding />
         </state>
       </provider>
@@ -378,14 +378,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="9" selection-start="4476" selection-end="4476" vertical-scroll-proportion="-4.728395" vertical-offset="4897" max-vertical-offset="16720">
+        <state line="77" column="16" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-20.91358" vertical-offset="0" max-vertical-offset="16676">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="222" selection-start="849" selection-end="849" vertical-scroll-proportion="0.8508287" vertical-offset="0" max-vertical-offset="5456">
+        <state line="12" column="130" selection-start="757" selection-end="757" vertical-scroll-proportion="0.6077348" vertical-offset="132" max-vertical-offset="5478">
           <folding />
         </state>
       </provider>
