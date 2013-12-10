@@ -55,19 +55,24 @@ html, body {
 html {
     position: relative;
     font-size: 62.5%;
-
-//    @media screen and (max-width: 670px) {
-//        font-size: 31.25%;
-//    }
 }
 
 body {
     font-size: 1rem;
     overflow: hidden;
-}
 
-.no-js body {
-    overflow: auto;
+    .no-js & {
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        & {
+            overflow: auto;
+        }
+        .no-js & {
+            overflow: auto;
+        }
+    }
 }
 
 a {
@@ -269,9 +274,9 @@ a {
     z-index: $index-overall;
     margin: auto 0;
 
-//    .no-js & {
-//        display: none;
-//    }
+    .no-js & {
+        display: none;
+    }
 
     li {
         margin-top: 10px;
@@ -295,7 +300,7 @@ a {
 .to-header a {
     @include icons-sprite('to-header');
 
-    &:hover, &.action{
+    &:hover, &.active{
         @include icons-sprite('to-header-hover');
     }
 }
@@ -303,7 +308,7 @@ a {
 .to-ui-design a {
     @include icons-sprite('to-ui-design');
 
-    &:hover, &.action{
+    &:hover, &.active{
         @include icons-sprite('to-ui-design-hover');
     }
 }
@@ -311,7 +316,7 @@ a {
 .to-back-end a {
     @include icons-sprite('to-back-end');
 
-    &:hover, &.action{
+    &:hover, &.active{
         @include icons-sprite('to-back-end-hover');
     }
 }
@@ -319,7 +324,7 @@ a {
 .to-front-end a {
     @include icons-sprite('to-front-end');
 
-    &:hover, &.action{
+    &:hover, &.active{
         @include icons-sprite('to-front-end-hover');
     }
 }
@@ -327,7 +332,7 @@ a {
 .to-mobility a {
     @include icons-sprite('to-mobility');
 
-    &:hover, &.action{
+    &:hover, &.active{
         @include icons-sprite('to-mobility-hover');
     }
 }
@@ -335,7 +340,7 @@ a {
 .to-contact a {
     @include icons-sprite('to-contact');
 
-    &:hover, &.action{
+    &:hover, &.active{
         @include icons-sprite('to-contact-hover');
     }
 }
