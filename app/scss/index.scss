@@ -150,7 +150,7 @@ a {
         background-image: none;
 
         h2 {
-            @include icons-sprite($sprite + '-big', true);
+            @include icons-sprite($sprite, true);
             @include text-hide(true);
             position: static;
             margin: 290px auto 60px;
@@ -614,7 +614,7 @@ a {
         border-image: 24 url(../images/contact.png);
         background-clip: padding-box;
         background-color: #398327;
-        margin: 60px auto 340px;
+        margin: 60px auto 200px;
         padding: 40px 0;
 
         h2 {
@@ -662,19 +662,19 @@ a {
     }
 
     @media screen and (max-width: #{$group-main-width}) {
-        @include icons-sprite('form-download-big', true);
+//        @include icons-sprite('form-download-big', true);
         left: 0;
         right: 0;
         margin: 0 auto;
-        bottom: 90px;
+        bottom: 60px;
 
-        &:hover {
-            @include icons-sprite('form-download-big', hover);
-        }
-
-        &:active {
-            @include icons-sprite('form-download-big', true);
-        }
+//        &:hover {
+//            @include icons-sprite('form-download-big', hover);
+//        }
+//
+//        &:active {
+//            @include icons-sprite('form-download-big', true);
+//        }
     }
 }
 
@@ -698,6 +698,10 @@ a {
 
     @media screen and (min-height: 768px) {
         display: block;
+    }
+
+    @media screen and (min-width: #{$group-main-width}) {
+        display: none;
     }
 }
 

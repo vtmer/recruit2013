@@ -404,9 +404,9 @@ a {
   }
   /* line 152, ../scss/index.scss */
   .ui-design-main h2 {
-    background-position: 0 -1600px;
-    height: 180px;
-    width: 343px;
+    background-position: 0 -794px;
+    height: 108px;
+    width: 204px;
     display: block;
     overflow: hidden;
     text-indent: -9999px;
@@ -534,9 +534,9 @@ a {
   }
   /* line 152, ../scss/index.scss */
   .back-end-main h2 {
-    background-position: 0 -1421px;
-    height: 179px;
-    width: 342px;
+    background-position: 0 -686px;
+    height: 108px;
+    width: 205px;
     display: block;
     overflow: hidden;
     text-indent: -9999px;
@@ -664,9 +664,9 @@ a {
   }
   /* line 152, ../scss/index.scss */
   .front-end-main h2 {
-    background-position: 0 -1246px;
-    height: 175px;
-    width: 332px;
+    background-position: 0 -578px;
+    height: 108px;
+    width: 206px;
     display: block;
     overflow: hidden;
     text-indent: -9999px;
@@ -794,9 +794,9 @@ a {
   }
   /* line 152, ../scss/index.scss */
   .mobility-main h2 {
-    background-position: 0 -1780px;
-    height: 182px;
-    width: 340px;
+    background-position: 0 -902px;
+    height: 109px;
+    width: 206px;
     display: block;
     overflow: hidden;
     text-indent: -9999px;
@@ -932,7 +932,7 @@ a {
     border-image: 24 url(../images/contact.png);
     background-clip: padding-box;
     background-color: #398327;
-    margin: 60px auto 340px;
+    margin: 60px auto 200px;
     padding: 40px 0;
   }
   /* line 620, ../scss/index.scss */
@@ -1000,25 +1000,10 @@ a {
 @media screen and (max-width: 1026px) {
   /* line 649, ../scss/index.scss */
   .form-download {
-    background-position: 0 -1097px;
-    height: 149px;
-    width: 357px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    bottom: 90px;
-  }
-  /* line 671, ../scss/index.scss */
-  .form-download:hover {
-    background-position: 0 -1097px;
-    height: 149px;
-    width: 357px;
-  }
-  /* line 675, ../scss/index.scss */
-  .form-download:active {
-    background-position: 0 -1097px;
-    height: 149px;
-    width: 357px;
+    bottom: 60px;
   }
 }
 
@@ -1043,71 +1028,77 @@ a {
     display: block;
   }
 }
+@media screen and (min-width: 1026px) {
+  /* line 681, ../scss/index.scss */
+  .figure {
+    display: none;
+  }
+}
 
-/* line 704, ../scss/index.scss */
+/* line 708, ../scss/index.scss */
 .ui-design-figure {
   left: 0;
 }
-/* line 707, ../scss/index.scss */
+/* line 711, ../scss/index.scss */
 .ui-design-figure a {
   background-position: -144px 0;
   height: 170px;
   width: 103px;
   left: 0;
 }
-/* line 711, ../scss/index.scss */
+/* line 715, ../scss/index.scss */
 .ui-design-figure a:hover {
   background-position: 0 -378px;
   height: 189px;
   width: 157px;
 }
 
-/* line 717, ../scss/index.scss */
+/* line 721, ../scss/index.scss */
 .back-end-figure {
   left: 284px;
 }
-/* line 720, ../scss/index.scss */
+/* line 724, ../scss/index.scss */
 .back-end-figure a {
   background-position: -247px 0;
   height: 183px;
   width: 97px;
 }
-/* line 723, ../scss/index.scss */
+/* line 727, ../scss/index.scss */
 .back-end-figure a:hover {
   background-position: -157px -378px;
   height: 200px;
   width: 148px;
 }
 
-/* line 729, ../scss/index.scss */
+/* line 733, ../scss/index.scss */
 .front-end-figure {
   left: 604px;
 }
-/* line 732, ../scss/index.scss */
+/* line 736, ../scss/index.scss */
 .front-end-figure a {
   background-position: 0 0;
   height: 177px;
   width: 71px;
   right: 80px;
 }
-/* line 736, ../scss/index.scss */
+/* line 740, ../scss/index.scss */
 .front-end-figure a:hover {
   background-position: -206px -902px;
   height: 195px;
   width: 133px;
 }
 
-/* line 742, ../scss/index.scss */
+/* line 746, ../scss/index.scss */
 .mobility-figure {
   left: 890px;
 }
-/* line 745, ../scss/index.scss */
+/* line 749, ../scss/index.scss */
 .mobility-figure a {
   background-position: -71px 0;
   height: 178px;
   width: 73px;
 }
-/* line 748, ../scss/index.scss */
+/* line 752, ../scss/index.scss */
 .mobility-figure a:hover {
   background-position: -50px -183px;
   height: 195px;
