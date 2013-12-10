@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "compass/utilities/sprites";
 
 // *****************************
 // Predefine
@@ -56,17 +57,23 @@
 }
 
 
-// text-hide
 %text-hide {
 	display: block;
 	overflow: hidden;
 	text-indent: -9999px;
 	text-decoration: none;
 }
-@mixin text-hide{
-	&{
-		@extend %text-hide;
-	}
+@mixin text-hide($media: false) {
+    @if ($media == true) {
+        display: block;
+        overflow: hidden;
+        text-indent: -9999px;
+        text-decoration: none;
+    } @else {
+        &{
+            @extend %text-hide;
+        }
+    }
 }
 
 
@@ -225,3 +232,35 @@
 	-ms-transform-origin: $value;
 	transform-origin: $value;
 }
+
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+
+    //http://compass-style.org/reference/compass/helpers/sprites/#sprite-file
+    $sprite-image: sprite-file($map, $sprite);
+
+    // http://compass-style.org/reference/compass/helpers/sprites/#sprite-url
+    $sprite-map: sprite-url($map);
+
+    // http://compass-style.org/reference/compass/helpers/sprites/#sprite-position
+    $sprite-position: sprite-position($map, $sprite);
+
+    // Returns background
+    background: $sprite-map $sprite-position $repeat;
+
+    // http://compass-style.org/reference/compass/helpers/image-dimensions/
+    // Checks to see if the user wants height returned
+    @if $height == true {
+        // Gets the height of the sprite-image
+        $sprite-height: image-height($sprite-image);
+        // Returns the height
+        height: $sprite-height; }
+
+    // http://compass-style.org/reference/compass/helpers/image-dimensions/
+    // Checks to see if the user wants height returned
+    @if $width == true {
+        // Gets the width of the sprite-image
+        $sprite-width: image-width($sprite-image);
+        // Returns the width
+        width: $sprite-width; }
+}
+

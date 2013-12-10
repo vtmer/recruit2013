@@ -19,6 +19,7 @@
 @import "compass/utilities/sprites";
 $icons-layout:smart;
 @import "icons/*.png";
+$icons: sprite-map("icons/*.png");
 
 
 
@@ -40,16 +41,27 @@ $group-main-width: 1026px;
 $group-main-height: 627px;
 $index-overall: 1000;
 
-html {
-    position: relative;
-}
+/**
+* font-size
+*/
+$font-size-pc: 1rem;
+$font-size-1026: 1.4rem;
 
 html, body {
     width: 100%;
     height: 100%;
+}
+
+html {
+    position: relative;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1rem;
     overflow: hidden;
 }
-.no-js html,
+
 .no-js body {
     overflow: auto;
 }
@@ -65,11 +77,13 @@ a {
 
 %block {
     width: 100%;
-    min-width: $group-main-width;
     height: 100%;
-//    min-height: $groud-main-height;
     overflow: hidden;
     position: relative;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        height: auto;
+    }
 }
 
 %block-main {
@@ -84,7 +98,70 @@ a {
 @mixin block-main($height) {
     @extend %block-main;
     height: $height;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        width: 90%;
+        height: auto;
+        line-height: 5rem;
+        position: static;
+        background-image: none;
+    }
 }
+@mixin group-main($sprite, $url: '../images/group-bg.png') {
+    @extend %block-main;
+    height: $group-main-height;
+    background: right 10px  url($url) no-repeat;
+
+    h2 {
+        // 修复compass bug —— @media中使用sprite异常
+        @include icons-sprite($sprite + '-big', false, -9999px);
+        position: absolute;
+        left: 390px;
+        top: 114px;
+        font-size: 40px;
+        color: #fff;
+
+        .sub-title {
+            @include text-hide;
+            @include icons-sprite($sprite, true);
+            position: absolute;
+            left: 100%;
+            bottom: -12px;
+            margin-left: 6px;
+        }
+    }
+
+    .the-figure {
+        @include text-hide;
+        position: absolute;
+        right: 690px;
+        top: 0;
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        width: 90%;
+        height: auto;
+        line-height: 5rem;
+        position: static;
+        margin-bottom: 30px;
+        background-image: none;
+
+        h2 {
+            @include icons-sprite($sprite + '-big', true);
+            @include text-hide(true);
+            position: static;
+            margin: 290px auto 60px;
+        }
+
+        .the-figure {
+            top: 56px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+    }
+}
+
 
 %intro {
     width: 556px;
@@ -96,10 +173,20 @@ a {
     @extend %intro;
     left: $left;
     top: $top;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        width: 100%;
+        position: static;
+        font-size: 3rem;
+    }
 }
 
 .intro-summary {
     margin-top: 1.8em;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        position: static;
+    }
 }
 
 /**
@@ -131,8 +218,19 @@ a {
     @extend %group-requirement;
     border-color: $border-color;
     color: $color;
-}
 
+    @media screen and (max-width: #{$group-main-width}) {
+        width: auto;
+        position: static;
+        margin: 60px 0;
+        font-size: 2.6rem;
+
+        h4 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+}
 
 
 
@@ -150,7 +248,7 @@ a {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 30px;
+    right: 40px;
     z-index: $index-overall;
     margin: auto 0;
 
@@ -170,6 +268,10 @@ a {
         @include text-hide;
         width: 25px;
         height: 24px;
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        display: none;
     }
 }
 
@@ -231,6 +333,11 @@ a {
 .header {
     @extend %block;
     background-color: #f2b701;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        height: 100%;
+    }
+
 }
 
 .logo {
@@ -239,6 +346,10 @@ a {
     position: absolute;
     left: $page-space;
     top: $page-space;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        display: none;
+    }
 }
 
 .follow-us {
@@ -247,24 +358,42 @@ a {
     position: absolute;
     left: $page-space;
     bottom: $page-space;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        display: none;
+    }
 }
 
 .header-main {
     @include block-main($height: 200px);
     text-align: center;
     color: #222;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        height: 260px;
+        position: absolute;
+    }
 }
 
 .header-main h1 {
+    line-height: 1.5em;
     font-family: 'impact';
     font-size: 100px;
     text-transform: uppercase;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        font-size: 10.6rem;
+    }
 }
 
 .header-main h2 {
     font-family: 'Microsoft YaHei';
     font-size: 38px;
     font-weight: bold;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        font-size: 4.8rem;
+    }
 }
 
 
@@ -281,8 +410,17 @@ a {
 }
 
 .ui-design-main {
-    @include block-main($height: $group-main-height);
-    background: right top url('../images/ui-design.png') no-repeat;
+    @include group-main($sprite: 'ui-design-title', $url: '../images/ui-design.png');
+
+    .the-figure {
+        @include icons-sprite('ui-design-figure-big', true);
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        .the-figure {
+            @include icons-sprite('ui-design-figure', true);
+        }
+    }
 }
 
 .ui-design-intro {
@@ -307,8 +445,17 @@ a {
 }
 
 .back-end-main {
-    @include block-main($height: $group-main-height);
-    background: right top url('../images/back-end.png') no-repeat;
+    @include group-main($sprite: 'back-end-title');
+
+    .the-figure {
+        @include icons-sprite('back-end-figure-big', true);
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        .the-figure {
+            @include icons-sprite('back-end-figure', true);
+        }
+    }
 }
 
 .back-end-intro {
@@ -333,8 +480,17 @@ a {
 }
 
 .front-end-main {
-    @include block-main($height: $group-main-height);
-    background: right top url('../images/front-end.png') no-repeat;
+    @include group-main($sprite: 'front-end-title');
+
+    .the-figure {
+        @include icons-sprite('front-end-figure-big', true);
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        .the-figure {
+            @include icons-sprite('front-end-figure', true);
+        }
+    }
 }
 
 .front-end-intro {
@@ -359,8 +515,17 @@ a {
 }
 
 .mobility-main {
-    @include block-main($height: $group-main-height);
-    background: right top url('../images/mobility.png') no-repeat;
+    @include group-main($sprite: 'mobility-title');
+
+    .the-figure {
+        @include icons-sprite('mobility-figure-big', true);
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        .the-figure {
+            @include icons-sprite('mobility-figure', true);
+        }
+    }
 }
 
 .mobility-intro {
@@ -382,6 +547,10 @@ a {
     @extend %block;
     line-height: 2em;
     background: left bottom #7cb854 url('../images/contact-bg.png') repeat-x;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        background-image: none;
+    }
 }
 
 .contact-main {
@@ -391,6 +560,38 @@ a {
     color: #f3bb01;
     bottom: auto;
     top: 78px;
+
+    h2 {
+        line-height: 1em;
+        font-family: 'impact';
+        font-size: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        left: 71px;
+        top: 47px;
+
+        .title-break {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        @include box-sizing(border-box);
+        border-width: 24px;
+        border-image: 24 url(../images/contact.png);
+        background-clip: padding-box;
+        background-color: #398327;
+        margin: 60px auto 340px;
+        padding: 40px 0;
+
+        h2 {
+            position: static;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            font-size: 11rem;
+        }
+    }
 }
 
 .vtmer-intro {
@@ -403,6 +604,10 @@ a {
     left: 72px;
     bottom: 42px;
     font-size: 13px;
+
+    @media screen and (max-width: #{$group-main-width}) {
+        display: none;
+    }
 }
 
 .about-us a {
@@ -415,11 +620,35 @@ a {
     position: absolute;
     left: 360px;
     bottom: 42px;
+
+    &:hover {
+        @include icons-sprite('form-download-hover');
+    }
+
+    &:active {
+        @include icons-sprite('form-download-active', true);
+    }
+
+    @media screen and (max-width: #{$group-main-width}) {
+        @include icons-sprite('form-download-big', true);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 90px;
+
+        &:hover {
+            @include icons-sprite('form-download-big', hover);
+        }
+
+        &:active {
+            @include icons-sprite('form-download-big', true);
+        }
+    }
 }
 
 .figure {
     display: none;
-    width: $group-main-width;
+    width: 961px;
     position: absolute;
     left: 0;
     right: 0;
@@ -427,12 +656,8 @@ a {
     margin: 0 auto;
 
     li {
-        display: inline-block;
-        margin-left: 140px;
-
-        &:first-child {
-            margin-left: 20px;
-        }
+        position: absolute;
+        bottom: 0;
     }
 
     a {
@@ -444,34 +669,52 @@ a {
     }
 }
 
-.ui-design-figure a{
-    @include icons-sprite('ui-design-figure', true);
+.ui-design-figure {
+    left: 0;
 
-    &:hover {
-        @include icons-sprite('ui-design-figure-hover', true);
+    a{
+        @include icons-sprite('ui-design-figure', true);
+        left: 0;
+
+        &:hover {
+            @include icons-sprite('ui-design-figure-hover', true);
+        }
     }
 }
 
-.back-end-figure a{
-    @include icons-sprite('back-end-figure', true);
+.back-end-figure {
+    left: 284px;
 
-    &:hover {
-        @include icons-sprite('back-end-figure-hover', true);
+    a{
+        @include icons-sprite('back-end-figure', true);
+
+        &:hover {
+            @include icons-sprite('back-end-figure-hover', true);
+        }
     }
 }
 
-.front-end-figure a{
-    @include icons-sprite('front-end-figure', true);
+.front-end-figure {
+    left: 604px;
 
-    &:hover {
-        @include icons-sprite('front-end-figure-hover', true);
+    a{
+        @include icons-sprite('front-end-figure', true);
+        right: 80px;
+
+        &:hover {
+            @include icons-sprite('front-end-figure-hover', true);
+        }
     }
 }
 
-.mobility-figure a{
-    @include icons-sprite('mobility-figure', true);
+.mobility-figure {
+    left: 890px;
 
-    &:hover {
-        @include icons-sprite('mobility-figure-hover', true);
+    a{
+        @include icons-sprite('mobility-figure', true);
+
+        &:hover {
+            @include icons-sprite('mobility-figure-hover', true);
+        }
     }
 }

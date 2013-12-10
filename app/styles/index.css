@@ -10,17 +10,9 @@
 /*------------------------------------*\
     $SCSS-SET
 \*------------------------------------*/
-/* line 60, ../scss/_predefine.scss */
-.nav a, .logo, .follow-us, .form-download, .figure a {
-  display: block;
-  overflow: hidden;
-  text-indent: -9999px;
-  text-decoration: none;
-}
-
-/* line 218, icons/*.png */
-.icons-sprite, .to-header a, .to-header a:hover, .to-header a.action, .to-ui-design a, .to-ui-design a:hover, .to-ui-design a.action, .to-back-end a, .to-back-end a:hover, .to-back-end a.action, .to-front-end a, .to-front-end a:hover, .to-front-end a.action, .to-mobility a, .to-mobility a:hover, .to-mobility a.action, .to-contact a, .to-contact a:hover, .to-contact a.action, .logo, .follow-us, .form-download, .ui-design-figure a, .ui-design-figure a:hover, .back-end-figure a, .back-end-figure a:hover, .front-end-figure a, .front-end-figure a:hover, .mobility-figure a, .mobility-figure a:hover {
-  background: url('../images/icons-s4fe1411c75.png') no-repeat;
+/* line 338, icons/*.png */
+.icons-sprite, .to-header a, .to-header a:hover, .to-header a.action, .to-ui-design a, .to-ui-design a:hover, .to-ui-design a.action, .to-back-end a, .to-back-end a:hover, .to-back-end a.action, .to-front-end a, .to-front-end a:hover, .to-front-end a.action, .to-mobility a, .to-mobility a:hover, .to-mobility a.action, .to-contact a, .to-contact a:hover, .to-contact a.action, .logo, .follow-us, .ui-design-main h2, .ui-design-main h2 .sub-title, .ui-design-main .the-figure, .back-end-main h2, .back-end-main h2 .sub-title, .back-end-main .the-figure, .front-end-main h2, .front-end-main h2 .sub-title, .front-end-main .the-figure, .mobility-main h2, .mobility-main h2 .sub-title, .mobility-main .the-figure, .form-download, .form-download:hover, .form-download:active, .ui-design-figure a, .ui-design-figure a:hover, .back-end-figure a, .back-end-figure a:hover, .front-end-figure a, .front-end-figure a:hover, .mobility-figure a, .mobility-figure a:hover {
+  background: url('../images/icons-sbd2ab76ba1.png') no-repeat;
 }
 
 /*------------------------------------*\
@@ -29,45 +21,58 @@
 /*------------------------------------*\
     $COMMAN
 \*------------------------------------*/
-/* line 43, ../scss/index.scss */
-html {
-  position: relative;
-}
-
-/* line 47, ../scss/index.scss */
+/**
+* font-size
+*/
+/* line 50, ../scss/index.scss */
 html, body {
   width: 100%;
   height: 100%;
+}
+
+/* line 55, ../scss/index.scss */
+html {
+  position: relative;
+  font-size: 62.5%;
+}
+
+/* line 60, ../scss/index.scss */
+body {
+  font-size: 1rem;
   overflow: hidden;
 }
 
-/* line 53, ../scss/index.scss */
-.no-js html,
+/* line 65, ../scss/index.scss */
 .no-js body {
   overflow: auto;
 }
 
-/* line 57, ../scss/index.scss */
+/* line 69, ../scss/index.scss */
 a {
   text-decoration: underline;
 }
 
-/* line 61, ../scss/index.scss */
+/* line 73, ../scss/index.scss */
 .slide-block {
   width: 100%;
   height: 100%;
 }
 
-/* line 66, ../scss/index.scss */
+/* line 78, ../scss/index.scss */
 .header, .ui-design, .back-end, .front-end, .mobility, .contact {
   width: 100%;
-  min-width: 1026px;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 1026px) {
+  /* line 78, ../scss/index.scss */
+  .header, .ui-design, .back-end, .front-end, .mobility, .contact {
+    height: auto;
+  }
+}
 
-/* line 75, ../scss/index.scss */
+/* line 89, ../scss/index.scss */
 .header-main, .ui-design-main, .back-end-main, .front-end-main, .mobility-main, .contact-main {
   width: 1026px;
   position: absolute;
@@ -78,7 +83,7 @@ a {
   margin: auto;
 }
 
-/* line 89, ../scss/index.scss */
+/* line 166, ../scss/index.scss */
 .ui-design-intro, .back-end-intro, .front-end-intro, .mobility-intro, .vtmer-intro {
   width: 556px;
   position: absolute;
@@ -86,16 +91,22 @@ a {
   color: #e6e6e6;
 }
 
-/* line 101, ../scss/index.scss */
+/* line 184, ../scss/index.scss */
 .intro-summary {
   margin-top: 1.8em;
+}
+@media screen and (max-width: 1026px) {
+  /* line 184, ../scss/index.scss */
+  .intro-summary {
+    position: static;
+  }
 }
 
 /**
 * 1. 宽度减去padding和border的双边距离之和
 * 2. 向左推进padding和border的单边距离之和
 */
-/* line 109, ../scss/index.scss */
+/* line 196, ../scss/index.scss */
 .ui-design-requirement, .back-end-requirement, .front-end-requirement, .mobility-requirement {
   width: 524px;
   /* 1 */
@@ -108,12 +119,12 @@ a {
   padding: 8px 13px;
   font-size: 13px;
 }
-/* line 119, ../scss/index.scss */
+/* line 206, ../scss/index.scss */
 .ui-design-requirement ul, .back-end-requirement ul, .front-end-requirement ul, .mobility-requirement ul {
   padding-left: 5em;
   position: relative;
 }
-/* line 124, ../scss/index.scss */
+/* line 211, ../scss/index.scss */
 .ui-design-requirement ul > li:first-child, .back-end-requirement ul > li:first-child, .front-end-requirement ul > li:first-child, .mobility-requirement ul > li:first-child {
   position: absolute;
   left: 0;
@@ -126,252 +137,720 @@ a {
 /**
 * 1. 高度为 六个按钮的高度之和 加上 margin的五个叠加间隔
 */
-/* line 148, ../scss/index.scss */
+/* line 246, ../scss/index.scss */
 .nav {
   height: 194px;
   /* 1 */
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 30px;
+  right: 40px;
   z-index: 1000;
   margin: auto 0;
 }
-/* line 161, ../scss/index.scss */
+/* line 259, ../scss/index.scss */
 .nav li {
   margin-top: 10px;
 }
-/* line 165, ../scss/index.scss */
+/* line 263, ../scss/index.scss */
 .nav li:first-child {
   margin-top: 0;
 }
-/* line 169, ../scss/index.scss */
+/* line 267, ../scss/index.scss */
 .nav a {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
   width: 25px;
   height: 24px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 246, ../scss/index.scss */
+  .nav {
+    display: none;
+  }
+}
 
-/* line 176, ../scss/index.scss */
+/* line 278, ../scss/index.scss */
 .to-header a {
-  background-position: -50px 0;
+  background-position: -306px -578px;
 }
-/* line 179, ../scss/index.scss */
+/* line 281, ../scss/index.scss */
 .to-header a:hover, .to-header a.action {
-  background-position: 0 -24px;
+  background-position: 0 -183px;
 }
 
-/* line 184, ../scss/index.scss */
+/* line 286, ../scss/index.scss */
 .to-ui-design a {
-  background-position: -75px -24px;
+  background-position: -255px -686px;
 }
-/* line 187, ../scss/index.scss */
+/* line 289, ../scss/index.scss */
 .to-ui-design a:hover, .to-ui-design a.action {
-  background-position: -100px -24px;
+  background-position: -205px -686px;
 }
 
-/* line 192, ../scss/index.scss */
+/* line 294, ../scss/index.scss */
 .to-back-end a {
-  background-position: -100px 0;
+  background-position: -331px -578px;
 }
-/* line 195, ../scss/index.scss */
+/* line 297, ../scss/index.scss */
 .to-back-end a:hover, .to-back-end a.action {
-  background-position: -75px 0;
+  background-position: -230px -686px;
 }
 
-/* line 200, ../scss/index.scss */
+/* line 302, ../scss/index.scss */
 .to-front-end a {
-  background-position: -25px -24px;
+  background-position: -25px -183px;
 }
-/* line 203, ../scss/index.scss */
+/* line 305, ../scss/index.scss */
 .to-front-end a:hover, .to-front-end a.action {
-  background-position: -50px -24px;
+  background-position: -206px -578px;
 }
 
-/* line 208, ../scss/index.scss */
+/* line 310, ../scss/index.scss */
 .to-mobility a {
-  background-position: -25px 0;
+  background-position: -280px -686px;
 }
-/* line 211, ../scss/index.scss */
+/* line 313, ../scss/index.scss */
 .to-mobility a:hover, .to-mobility a.action {
-  background-position: -125px 0;
+  background-position: -281px -578px;
 }
 
-/* line 216, ../scss/index.scss */
+/* line 318, ../scss/index.scss */
 .to-contact a {
-  background-position: 0 0;
+  background-position: -231px -578px;
 }
-/* line 219, ../scss/index.scss */
+/* line 321, ../scss/index.scss */
 .to-contact a:hover, .to-contact a.action {
-  background-position: -135px -560px;
+  background-position: -256px -578px;
 }
 
 /*------------------------------------*\
     $HEADER
 \*------------------------------------*/
-/* line 231, ../scss/index.scss */
+/* line 333, ../scss/index.scss */
 .header {
   background-color: #f2b701;
 }
+@media screen and (max-width: 1026px) {
+  /* line 333, ../scss/index.scss */
+  .header {
+    height: 100%;
+  }
+}
 
-/* line 236, ../scss/index.scss */
+/* line 343, ../scss/index.scss */
 .logo {
-  background-position: 0 -52px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  background-position: -204px -794px;
   height: 60px;
   width: 120px;
   position: absolute;
   left: 40px;
   top: 40px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 343, ../scss/index.scss */
+  .logo {
+    display: none;
+  }
+}
 
-/* line 244, ../scss/index.scss */
+/* line 355, ../scss/index.scss */
 .follow-us {
-  background-position: -125px -24px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  background-position: -305px -686px;
   height: 28px;
   width: 28px;
   position: absolute;
   left: 40px;
   bottom: 40px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 355, ../scss/index.scss */
+  .follow-us {
+    display: none;
+  }
+}
 
-/* line 252, ../scss/index.scss */
+/* line 367, ../scss/index.scss */
 .header-main {
   height: 200px;
   text-align: center;
   color: #222;
 }
+@media screen and (max-width: 1026px) {
+  /* line 367, ../scss/index.scss */
+  .header-main {
+    width: 90%;
+    height: auto;
+    line-height: 5rem;
+    position: static;
+    background-image: none;
+  }
+}
+@media screen and (max-width: 1026px) {
+  /* line 367, ../scss/index.scss */
+  .header-main {
+    height: 260px;
+    position: absolute;
+  }
+}
 
-/* line 258, ../scss/index.scss */
+/* line 378, ../scss/index.scss */
 .header-main h1 {
+  line-height: 1.5em;
   font-family: 'impact';
   font-size: 100px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1026px) {
+  /* line 378, ../scss/index.scss */
+  .header-main h1 {
+    font-size: 10.6rem;
+  }
+}
 
-/* line 264, ../scss/index.scss */
+/* line 389, ../scss/index.scss */
 .header-main h2 {
   font-family: 'Microsoft YaHei';
   font-size: 38px;
   font-weight: bold;
 }
+@media screen and (max-width: 1026px) {
+  /* line 389, ../scss/index.scss */
+  .header-main h2 {
+    font-size: 4.8rem;
+  }
+}
 
 /*------------------------------------*\
     $UI-DESIGN
 \*------------------------------------*/
-/* line 277, ../scss/index.scss */
+/* line 406, ../scss/index.scss */
 .ui-design {
   line-height: 2em;
   background-color: #e57d04;
 }
 
-/* line 283, ../scss/index.scss */
+/* line 412, ../scss/index.scss */
 .ui-design-main {
   height: 627px;
-  background: right top url("../images/ui-design.png") no-repeat;
+  background: right 10px url("../images/ui-design.png") no-repeat;
+}
+/* line 115, ../scss/index.scss */
+.ui-design-main h2 {
+  background-position: -9999px -1600px;
+  position: absolute;
+  left: 390px;
+  top: 114px;
+  font-size: 40px;
+  color: #fff;
+}
+/* line 124, ../scss/index.scss */
+.ui-design-main h2 .sub-title {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  background-position: 0 -794px;
+  height: 108px;
+  width: 204px;
+  position: absolute;
+  left: 100%;
+  bottom: -12px;
+  margin-left: 6px;
+}
+/* line 134, ../scss/index.scss */
+.ui-design-main .the-figure {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  position: absolute;
+  right: 690px;
+  top: 0;
+}
+@media screen and (max-width: 1026px) {
+  /* line 412, ../scss/index.scss */
+  .ui-design-main {
+    width: 90%;
+    height: auto;
+    line-height: 5rem;
+    position: static;
+    margin-bottom: 30px;
+    background-image: none;
+  }
+  /* line 149, ../scss/index.scss */
+  .ui-design-main h2 {
+    background-position: 0 -1600px;
+    height: 180px;
+    width: 343px;
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-decoration: none;
+    position: static;
+    margin: 290px auto 60px;
+  }
+  /* line 156, ../scss/index.scss */
+  .ui-design-main .the-figure {
+    top: 56px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+/* line 415, ../scss/index.scss */
+.ui-design-main .the-figure {
+  background-position: 0 -2625px;
+  height: 596px;
+  width: 359px;
+}
+@media screen and (max-width: 1026px) {
+  /* line 420, ../scss/index.scss */
+  .ui-design-main .the-figure {
+    background-position: -144px 0;
+    height: 170px;
+    width: 103px;
+  }
 }
 
-/* line 288, ../scss/index.scss */
+/* line 426, ../scss/index.scss */
 .ui-design-intro {
   left: 394px;
   top: 180px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 426, ../scss/index.scss */
+  .ui-design-intro {
+    width: 100%;
+    position: static;
+    font-size: 3rem;
+  }
+}
 
-/* line 292, ../scss/index.scss */
+/* line 430, ../scss/index.scss */
 .ui-design-requirement {
   border-color: #d24c0a;
   color: #fec99b;
+}
+@media screen and (max-width: 1026px) {
+  /* line 430, ../scss/index.scss */
+  .ui-design-requirement {
+    width: auto;
+    position: static;
+    margin: 60px 0;
+    font-size: 2.6rem;
+  }
+  /* line 228, ../scss/index.scss */
+  .ui-design-requirement h4 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }
 
 /*------------------------------------*\
     $BACK-END
 \*------------------------------------*/
-/* line 303, ../scss/index.scss */
+/* line 441, ../scss/index.scss */
 .back-end {
   line-height: 2em;
   background-color: #7c378a;
 }
 
-/* line 309, ../scss/index.scss */
+/* line 447, ../scss/index.scss */
 .back-end-main {
   height: 627px;
-  background: right top url("../images/back-end.png") no-repeat;
+  background: right 10px url("../images/group-bg.png") no-repeat;
+}
+/* line 115, ../scss/index.scss */
+.back-end-main h2 {
+  background-position: -9999px -1421px;
+  position: absolute;
+  left: 390px;
+  top: 114px;
+  font-size: 40px;
+  color: #fff;
+}
+/* line 124, ../scss/index.scss */
+.back-end-main h2 .sub-title {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  background-position: 0 -686px;
+  height: 108px;
+  width: 205px;
+  position: absolute;
+  left: 100%;
+  bottom: -12px;
+  margin-left: 6px;
+}
+/* line 134, ../scss/index.scss */
+.back-end-main .the-figure {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  position: absolute;
+  right: 690px;
+  top: 0;
+}
+@media screen and (max-width: 1026px) {
+  /* line 447, ../scss/index.scss */
+  .back-end-main {
+    width: 90%;
+    height: auto;
+    line-height: 5rem;
+    position: static;
+    margin-bottom: 30px;
+    background-image: none;
+  }
+  /* line 149, ../scss/index.scss */
+  .back-end-main h2 {
+    background-position: 0 -1421px;
+    height: 179px;
+    width: 342px;
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-decoration: none;
+    position: static;
+    margin: 290px auto 60px;
+  }
+  /* line 156, ../scss/index.scss */
+  .back-end-main .the-figure {
+    top: 56px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+/* line 450, ../scss/index.scss */
+.back-end-main .the-figure {
+  background-position: 0 -2036px;
+  height: 589px;
+  width: 311px;
+}
+@media screen and (max-width: 1026px) {
+  /* line 455, ../scss/index.scss */
+  .back-end-main .the-figure {
+    background-position: -247px 0;
+    height: 183px;
+    width: 97px;
+  }
 }
 
-/* line 314, ../scss/index.scss */
+/* line 461, ../scss/index.scss */
 .back-end-intro {
   left: 394px;
   top: 180px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 461, ../scss/index.scss */
+  .back-end-intro {
+    width: 100%;
+    position: static;
+    font-size: 3rem;
+  }
+}
 
-/* line 318, ../scss/index.scss */
+/* line 465, ../scss/index.scss */
 .back-end-requirement {
   border-color: #3d1b48;
   color: #b981d1;
+}
+@media screen and (max-width: 1026px) {
+  /* line 465, ../scss/index.scss */
+  .back-end-requirement {
+    width: auto;
+    position: static;
+    margin: 60px 0;
+    font-size: 2.6rem;
+  }
+  /* line 228, ../scss/index.scss */
+  .back-end-requirement h4 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }
 
 /*------------------------------------*\
     $FRONT-END
 \*------------------------------------*/
-/* line 329, ../scss/index.scss */
+/* line 476, ../scss/index.scss */
 .front-end {
   line-height: 2em;
   background-color: #3465aa;
 }
 
-/* line 335, ../scss/index.scss */
+/* line 482, ../scss/index.scss */
 .front-end-main {
   height: 627px;
-  background: right top url("../images/front-end.png") no-repeat;
+  background: right 10px url("../images/group-bg.png") no-repeat;
+}
+/* line 115, ../scss/index.scss */
+.front-end-main h2 {
+  background-position: -9999px -1246px;
+  position: absolute;
+  left: 390px;
+  top: 114px;
+  font-size: 40px;
+  color: #fff;
+}
+/* line 124, ../scss/index.scss */
+.front-end-main h2 .sub-title {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  background-position: 0 -578px;
+  height: 108px;
+  width: 206px;
+  position: absolute;
+  left: 100%;
+  bottom: -12px;
+  margin-left: 6px;
+}
+/* line 134, ../scss/index.scss */
+.front-end-main .the-figure {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  position: absolute;
+  right: 690px;
+  top: 0;
+}
+@media screen and (max-width: 1026px) {
+  /* line 482, ../scss/index.scss */
+  .front-end-main {
+    width: 90%;
+    height: auto;
+    line-height: 5rem;
+    position: static;
+    margin-bottom: 30px;
+    background-image: none;
+  }
+  /* line 149, ../scss/index.scss */
+  .front-end-main h2 {
+    background-position: 0 -1246px;
+    height: 175px;
+    width: 332px;
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-decoration: none;
+    position: static;
+    margin: 290px auto 60px;
+  }
+  /* line 156, ../scss/index.scss */
+  .front-end-main .the-figure {
+    top: 56px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+/* line 485, ../scss/index.scss */
+.front-end-main .the-figure {
+  background-position: 0 -3833px;
+  height: 626px;
+  width: 254px;
+}
+@media screen and (max-width: 1026px) {
+  /* line 490, ../scss/index.scss */
+  .front-end-main .the-figure {
+    background-position: 0 0;
+    height: 177px;
+    width: 71px;
+  }
 }
 
-/* line 340, ../scss/index.scss */
+/* line 496, ../scss/index.scss */
 .front-end-intro {
   left: 394px;
   top: 180px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 496, ../scss/index.scss */
+  .front-end-intro {
+    width: 100%;
+    position: static;
+    font-size: 3rem;
+  }
+}
 
-/* line 344, ../scss/index.scss */
+/* line 500, ../scss/index.scss */
 .front-end-requirement {
   border-color: #193265;
   color: #7ca0c5;
+}
+@media screen and (max-width: 1026px) {
+  /* line 500, ../scss/index.scss */
+  .front-end-requirement {
+    width: auto;
+    position: static;
+    margin: 60px 0;
+    font-size: 2.6rem;
+  }
+  /* line 228, ../scss/index.scss */
+  .front-end-requirement h4 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }
 
 /*------------------------------------*\
     $MOBILITY
 \*------------------------------------*/
-/* line 355, ../scss/index.scss */
+/* line 511, ../scss/index.scss */
 .mobility {
   line-height: 2em;
   background-color: #09a275;
 }
 
-/* line 361, ../scss/index.scss */
+/* line 517, ../scss/index.scss */
 .mobility-main {
   height: 627px;
-  background: right top url("../images/mobility.png") no-repeat;
+  background: right 10px url("../images/group-bg.png") no-repeat;
+}
+/* line 115, ../scss/index.scss */
+.mobility-main h2 {
+  background-position: -9999px -1780px;
+  position: absolute;
+  left: 390px;
+  top: 114px;
+  font-size: 40px;
+  color: #fff;
+}
+/* line 124, ../scss/index.scss */
+.mobility-main h2 .sub-title {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  background-position: 0 -902px;
+  height: 109px;
+  width: 206px;
+  position: absolute;
+  left: 100%;
+  bottom: -12px;
+  margin-left: 6px;
+}
+/* line 134, ../scss/index.scss */
+.mobility-main .the-figure {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  position: absolute;
+  right: 690px;
+  top: 0;
+}
+@media screen and (max-width: 1026px) {
+  /* line 517, ../scss/index.scss */
+  .mobility-main {
+    width: 90%;
+    height: auto;
+    line-height: 5rem;
+    position: static;
+    margin-bottom: 30px;
+    background-image: none;
+  }
+  /* line 149, ../scss/index.scss */
+  .mobility-main h2 {
+    background-position: 0 -1780px;
+    height: 182px;
+    width: 340px;
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-decoration: none;
+    position: static;
+    margin: 290px auto 60px;
+  }
+  /* line 156, ../scss/index.scss */
+  .mobility-main .the-figure {
+    top: 56px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+/* line 520, ../scss/index.scss */
+.mobility-main .the-figure {
+  background-position: 0 -3221px;
+  height: 612px;
+  width: 253px;
+}
+@media screen and (max-width: 1026px) {
+  /* line 525, ../scss/index.scss */
+  .mobility-main .the-figure {
+    background-position: -71px 0;
+    height: 178px;
+    width: 73px;
+  }
 }
 
-/* line 366, ../scss/index.scss */
+/* line 531, ../scss/index.scss */
 .mobility-intro {
   left: 394px;
   top: 180px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 531, ../scss/index.scss */
+  .mobility-intro {
+    width: 100%;
+    position: static;
+    font-size: 3rem;
+  }
+}
 
-/* line 370, ../scss/index.scss */
+/* line 535, ../scss/index.scss */
 .mobility-requirement {
   border-color: #045e39;
   color: #6ccdb3;
+}
+@media screen and (max-width: 1026px) {
+  /* line 535, ../scss/index.scss */
+  .mobility-requirement {
+    width: auto;
+    position: static;
+    margin: 60px 0;
+    font-size: 2.6rem;
+  }
+  /* line 228, ../scss/index.scss */
+  .mobility-requirement h4 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }
 
 /*------------------------------------*\
     $CONTACT
 \*------------------------------------*/
-/* line 381, ../scss/index.scss */
+/* line 546, ../scss/index.scss */
 .contact {
   line-height: 2em;
   background: left bottom #7cb854 url("../images/contact-bg.png") repeat-x;
 }
+@media screen and (max-width: 1026px) {
+  /* line 546, ../scss/index.scss */
+  .contact {
+    background-image: none;
+  }
+}
 
-/* line 387, ../scss/index.scss */
+/* line 556, ../scss/index.scss */
 .contact-main {
   height: 434px;
   width: 961px;
@@ -380,111 +859,230 @@ a {
   bottom: auto;
   top: 78px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 556, ../scss/index.scss */
+  .contact-main {
+    width: 90%;
+    height: auto;
+    line-height: 5rem;
+    position: static;
+    background-image: none;
+  }
+}
+/* line 564, ../scss/index.scss */
+.contact-main h2 {
+  line-height: 1em;
+  font-family: 'impact';
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  left: 71px;
+  top: 47px;
+}
+/* line 574, ../scss/index.scss */
+.contact-main h2 .title-break {
+  display: block;
+}
+@media screen and (max-width: 1026px) {
+  /* line 556, ../scss/index.scss */
+  .contact-main {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-width: 24px;
+    border-image: 24 url(../images/contact.png);
+    background-clip: padding-box;
+    background-color: #398327;
+    margin: 60px auto 340px;
+    padding: 40px 0;
+  }
+  /* line 588, ../scss/index.scss */
+  .contact-main h2 {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 11rem;
+  }
+}
 
-/* line 396, ../scss/index.scss */
+/* line 597, ../scss/index.scss */
 .vtmer-intro {
   left: 360px;
   top: 48px;
   color: #f3bb01;
 }
+@media screen and (max-width: 1026px) {
+  /* line 597, ../scss/index.scss */
+  .vtmer-intro {
+    width: 100%;
+    position: static;
+    font-size: 3rem;
+  }
+}
 
-/* line 401, ../scss/index.scss */
+/* line 602, ../scss/index.scss */
 .about-us {
   position: absolute;
   left: 72px;
   bottom: 42px;
   font-size: 13px;
 }
+@media screen and (max-width: 1026px) {
+  /* line 602, ../scss/index.scss */
+  .about-us {
+    display: none;
+  }
+}
 
-/* line 408, ../scss/index.scss */
+/* line 613, ../scss/index.scss */
 .about-us a {
   color: #f3bb01;
 }
 
-/* line 412, ../scss/index.scss */
+/* line 617, ../scss/index.scss */
 .form-download {
-  background-position: 0 -112px;
-  height: 70px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
+  background-position: -185px -183px;
+  height: 74px;
   width: 168px;
   position: absolute;
   left: 360px;
   bottom: 42px;
 }
+/* line 624, ../scss/index.scss */
+.form-download:hover {
+  background-position: -168px -1962px;
+}
+/* line 628, ../scss/index.scss */
+.form-download:active {
+  background-position: 0 -1962px;
+  height: 70px;
+  width: 168px;
+}
+@media screen and (max-width: 1026px) {
+  /* line 617, ../scss/index.scss */
+  .form-download {
+    background-position: 0 -1097px;
+    height: 149px;
+    width: 357px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 90px;
+  }
+  /* line 639, ../scss/index.scss */
+  .form-download:hover {
+    background-position: 0 -1097px;
+    height: 149px;
+    width: 357px;
+  }
+  /* line 643, ../scss/index.scss */
+  .form-download:active {
+    background-position: 0 -1097px;
+    height: 149px;
+    width: 357px;
+  }
+}
 
-/* line 420, ../scss/index.scss */
+/* line 649, ../scss/index.scss */
 .figure {
   display: none;
-  width: 1026px;
+  width: 961px;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 26px;
   margin: 0 auto;
 }
-/* line 429, ../scss/index.scss */
+/* line 658, ../scss/index.scss */
 .figure li {
-  display: inline-block;
-  margin-left: 140px;
+  position: absolute;
+  bottom: 0;
 }
-/* line 433, ../scss/index.scss */
-.figure li:first-child {
-  margin-left: 20px;
+/* line 663, ../scss/index.scss */
+.figure a {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-decoration: none;
 }
 @media screen and (min-height: 768px) {
-  /* line 420, ../scss/index.scss */
+  /* line 649, ../scss/index.scss */
   .figure {
     display: block;
   }
 }
 
-/* line 447, ../scss/index.scss */
+/* line 672, ../scss/index.scss */
+.ui-design-figure {
+  left: 0;
+}
+/* line 675, ../scss/index.scss */
 .ui-design-figure a {
-  background-position: 0 -371px;
-  height: 189px;
-  width: 157px;
+  background-position: -144px 0;
+  height: 170px;
+  width: 103px;
+  left: 0;
 }
-/* line 450, ../scss/index.scss */
+/* line 679, ../scss/index.scss */
 .ui-design-figure a:hover {
-  background-position: 0 -182px;
+  background-position: 0 -378px;
   height: 189px;
   width: 157px;
 }
 
-/* line 455, ../scss/index.scss */
+/* line 685, ../scss/index.scss */
+.back-end-figure {
+  left: 284px;
+}
+/* line 688, ../scss/index.scss */
 .back-end-figure a {
-  background-position: 0 -1340px;
-  height: 200px;
-  width: 148px;
+  background-position: -247px 0;
+  height: 183px;
+  width: 97px;
 }
-/* line 458, ../scss/index.scss */
+/* line 691, ../scss/index.scss */
 .back-end-figure a:hover {
-  background-position: 0 -1540px;
+  background-position: -157px -378px;
   height: 200px;
   width: 148px;
 }
 
-/* line 463, ../scss/index.scss */
-.front-end-figure a {
-  background-position: 0 -950px;
-  height: 195px;
-  width: 133px;
+/* line 697, ../scss/index.scss */
+.front-end-figure {
+  left: 604px;
 }
-/* line 466, ../scss/index.scss */
+/* line 700, ../scss/index.scss */
+.front-end-figure a {
+  background-position: 0 0;
+  height: 177px;
+  width: 71px;
+  right: 80px;
+}
+/* line 704, ../scss/index.scss */
 .front-end-figure a:hover {
-  background-position: 0 -1145px;
+  background-position: -206px -902px;
   height: 195px;
   width: 133px;
 }
 
-/* line 471, ../scss/index.scss */
-.mobility-figure a {
-  background-position: 0 -560px;
-  height: 195px;
-  width: 135px;
+/* line 710, ../scss/index.scss */
+.mobility-figure {
+  left: 890px;
 }
-/* line 474, ../scss/index.scss */
+/* line 713, ../scss/index.scss */
+.mobility-figure a {
+  background-position: -71px 0;
+  height: 178px;
+  width: 73px;
+}
+/* line 716, ../scss/index.scss */
 .mobility-figure a:hover {
-  background-position: 0 -755px;
+  background-position: -50px -183px;
   height: 195px;
   width: 135px;
 }
