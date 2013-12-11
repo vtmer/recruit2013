@@ -1,12 +1,11 @@
 (function($) {
 
+    // 当所有内容准备完毕才允许运行js
     $(window).ready(function() {
+        
         // 去除no-js类名，js运行成功
         $('html').removeClass('no-js');
-    });
 
-
-    $(function() {
         var $links = $('a[href^=http]'),
             $button = $('ul.nav a'),
             $figure = $('ul.figure a');
@@ -68,8 +67,12 @@
         });
 
         $(window).on('resize', function() {
-            $button.filter('.active')
-                .triggerHandler('click');
+
+            // 如果按钮存在的话，才触发事件
+            if ($('.nav:visible').length) {
+                $button.filter('.active')
+                    .triggerHandler('click');
+            }
         });
     });
 
