@@ -38,9 +38,9 @@
 *
 */
 @font-face {
-  font-family: Impact;
-  src: url("../fonts/Impact.eot?") format("eot");
-  src: url("../fonts/Impact.woff") format("woff"), url("../fonts/Impact.ttf") format("truetype");
+  font-family: "impact-mobile";
+  src: url("../fonts/impact-mobile.eot?") format("eot");
+  src: url("../fonts/impact-mobile.woff") format("woff"), url("../fonts/impact-mobile.ttf") format("truetype");
 }
 
 /* line 57, ../scss/index.scss */
@@ -343,7 +343,7 @@ a {
 /* line 419, ../scss/index.scss */
 .header-main h1 {
   line-height: 1.5;
-  font-family: Impact, sans-serif;
+  font-family: impact, 'impact-mobile', sans-serif;
   font-size: 100px;
   text-transform: uppercase;
 }
@@ -934,7 +934,7 @@ a {
 /* line 608, ../scss/index.scss */
 .contact-main h2 {
   line-height: 1em;
-  font-family: Impact, sans-serif;
+  font-family: Impact, 'impact-mobile', sans-serif;
   font-size: 60px;
   text-align: center;
   text-transform: uppercase;

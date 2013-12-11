@@ -1,6 +1,6 @@
 /*
 Syntax error: File to import not found or unreadable: compass/utilities/sprites.
-              Load path: F:/xampp/htdocs/recruit2013/app/scss
+              Load path: F:/xampp/htdocs/recruit/app/scss
         on line 2 of _predefine.scss
         from line 18 of index.scss
 
@@ -57,4 +57,4 @@ F:/Ruby200-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: compass/utilities/sprites.\A               Load path: F:/xampp/htdocs/recruit2013/app/scss\A         on line 2 of _predefine.scss\A         from line 18 of index.scss\A \A 1: @charset \"utf-8\";\A 2: \A 3: /*------------------------------------*\\A 4:     $CONTENTS\A 5: \*------------------------------------*/\A 6: /**\A 7:  * CONTENTS............You’re reading it!"; }
+  content: "Syntax error: File to import not found or unreadable: compass/utilities/sprites.\A               Load path: F:/xampp/htdocs/recruit/app/scss\A         on line 2 of _predefine.scss\A         from line 18 of index.scss\A \A 1: @charset \"utf-8\";\A 2: \A 3: /*------------------------------------*\\A 4:     $CONTENTS\A 5: \*------------------------------------*/\A 6: /**\A 7:  * CONTENTS............You’re reading it!"; }

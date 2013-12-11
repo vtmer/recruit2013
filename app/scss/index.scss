@@ -52,7 +52,7 @@ $font-size-1026: 1.4rem;
 * font-face
 *
 */
-@include font-face(Impact);
+@include font-face('impact-mobile');
 
 html, body {
     width: 100%;
@@ -418,7 +418,7 @@ a {
 
 .header-main h1 {
     line-height: 1.5;
-    font-family: Impact, sans-serif;
+    font-family: impact, 'impact-mobile', sans-serif;
     font-size: 100px;
     text-transform: uppercase;
 
@@ -607,7 +607,7 @@ a {
 
     h2 {
         line-height: 1em;
-        font-family: Impact, sans-serif;
+        font-family: Impact, 'impact-mobile', sans-serif;
         font-size: 60px;
         text-align: center;
         text-transform: uppercase;
