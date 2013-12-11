@@ -8,7 +8,8 @@
 
     $(function() {
         var $links = $('a[href^=http]'),
-            $button = $('ul.nav a');
+            $button = $('ul.nav a'),
+            $figure = $('ul.figure a');
 
         $links.on('click', function(event) {
             window.open($(this).attr('href'));
@@ -53,6 +54,17 @@
 
                 event.preventDefault();
             }
+        });
+
+        $figure.on('click', function(event) {
+
+            var $this = $(this),
+                href = $this.attr('href'),
+                $targetElem = $button.filter('[href=' + href + ']');
+
+            $targetElem.triggerHandler('click');
+
+            event.preventDefault();
         });
 
         $(window).on('resize', function() {

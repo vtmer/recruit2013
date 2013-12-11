@@ -31,51 +31,62 @@
 \*------------------------------------*/
 /**
 * font-size
+*
 */
-/* line 50, ../scss/index.scss */
+/**
+* font-face
+*
+*/
+@font-face {
+  font-family: Impact;
+  src: url("../fonts/Impact.eot?") format("eot");
+  src: url("../fonts/Impact.woff") format("woff"), url("../fonts/Impact.ttf") format("truetype");
+}
+
+/* line 57, ../scss/index.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* line 55, ../scss/index.scss */
+/* line 62, ../scss/index.scss */
 html {
   position: relative;
   font-size: 62.5%;
 }
 
-/* line 60, ../scss/index.scss */
+/* line 67, ../scss/index.scss */
 body {
   font-size: 1rem;
   overflow: hidden;
 }
-/* line 64, ../scss/index.scss */
+/* line 71, ../scss/index.scss */
 .no-js body {
   overflow: hidden;
 }
 @media screen and (max-width: 1026px) {
-  /* line 69, ../scss/index.scss */
+  /* line 76, ../scss/index.scss */
   body {
     overflow: auto;
   }
-  /* line 72, ../scss/index.scss */
+  /* line 79, ../scss/index.scss */
   .no-js body {
     overflow: auto;
   }
 }
 
-/* line 78, ../scss/index.scss */
+/* line 85, ../scss/index.scss */
 a {
   text-decoration: underline;
 }
 
-/* line 82, ../scss/index.scss */
+/* line 89, ../scss/index.scss */
 .slide-block {
   width: 100%;
   height: 100%;
 }
 
-/* line 87, ../scss/index.scss */
+/* line 94, ../scss/index.scss */
 .header, .ui-design, .back-end, .front-end, .mobility, .contact {
   width: 100%;
   height: 100%;
@@ -84,13 +95,13 @@ a {
   position: relative;
 }
 @media screen and (max-width: 1026px) {
-  /* line 87, ../scss/index.scss */
+  /* line 94, ../scss/index.scss */
   .header, .ui-design, .back-end, .front-end, .mobility, .contact {
     height: auto;
   }
 }
 
-/* line 99, ../scss/index.scss */
+/* line 106, ../scss/index.scss */
 .header-main, .ui-design-main, .back-end-main, .front-end-main, .mobility-main, .contact-main {
   width: 1026px;
   position: absolute;
@@ -101,7 +112,7 @@ a {
   margin: auto;
 }
 
-/* line 174, ../scss/index.scss */
+/* line 181, ../scss/index.scss */
 .ui-design-intro, .back-end-intro, .front-end-intro, .mobility-intro, .vtmer-intro {
   width: 556px;
   position: absolute;
@@ -109,12 +120,12 @@ a {
   color: #e6e6e6;
 }
 
-/* line 192, ../scss/index.scss */
+/* line 199, ../scss/index.scss */
 .intro-summary {
   margin-top: 1.8em;
 }
 @media screen and (max-width: 1026px) {
-  /* line 192, ../scss/index.scss */
+  /* line 199, ../scss/index.scss */
   .intro-summary {
     position: static;
   }
@@ -124,7 +135,7 @@ a {
 * 1. 宽度减去padding和border的双边距离之和
 * 2. 向左推进padding和border的单边距离之和
 */
-/* line 204, ../scss/index.scss */
+/* line 211, ../scss/index.scss */
 .ui-design-requirement, .back-end-requirement, .front-end-requirement, .mobility-requirement {
   width: 524px;
   /* 1 */
@@ -137,12 +148,12 @@ a {
   padding: 8px 13px;
   font-size: 13px;
 }
-/* line 214, ../scss/index.scss */
+/* line 221, ../scss/index.scss */
 .ui-design-requirement ul, .back-end-requirement ul, .front-end-requirement ul, .mobility-requirement ul {
   padding-left: 5em;
   position: relative;
 }
-/* line 219, ../scss/index.scss */
+/* line 226, ../scss/index.scss */
 .ui-design-requirement ul > li:first-child, .back-end-requirement ul > li:first-child, .front-end-requirement ul > li:first-child, .mobility-requirement ul > li:first-child {
   position: absolute;
   left: 0;
@@ -155,7 +166,7 @@ a {
 /**
 * 1. 高度为 六个按钮的高度之和 加上 margin的五个叠加间隔
 */
-/* line 268, ../scss/index.scss */
+/* line 275, ../scss/index.scss */
 .nav {
   height: 194px;
   /* 1 */
@@ -166,80 +177,80 @@ a {
   z-index: 1000;
   margin: auto 0;
 }
-/* line 277, ../scss/index.scss */
+/* line 284, ../scss/index.scss */
 .no-js .nav {
   display: none;
 }
-/* line 281, ../scss/index.scss */
+/* line 288, ../scss/index.scss */
 .nav li {
   margin-top: 10px;
 }
-/* line 285, ../scss/index.scss */
+/* line 292, ../scss/index.scss */
 .nav li:first-child {
   margin-top: 0;
 }
-/* line 289, ../scss/index.scss */
+/* line 296, ../scss/index.scss */
 .nav a {
   width: 25px;
   height: 24px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 268, ../scss/index.scss */
+  /* line 275, ../scss/index.scss */
   .nav {
     display: none;
   }
 }
 
-/* line 300, ../scss/index.scss */
+/* line 307, ../scss/index.scss */
 .to-header a {
   background-position: -306px -578px;
 }
-/* line 303, ../scss/index.scss */
+/* line 310, ../scss/index.scss */
 .to-header a:hover, .to-header a.active {
   background-position: 0 -183px;
 }
 
-/* line 308, ../scss/index.scss */
+/* line 315, ../scss/index.scss */
 .to-ui-design a {
   background-position: -255px -686px;
 }
-/* line 311, ../scss/index.scss */
+/* line 318, ../scss/index.scss */
 .to-ui-design a:hover, .to-ui-design a.active {
   background-position: -205px -686px;
 }
 
-/* line 316, ../scss/index.scss */
+/* line 323, ../scss/index.scss */
 .to-back-end a {
   background-position: -331px -578px;
 }
-/* line 319, ../scss/index.scss */
+/* line 326, ../scss/index.scss */
 .to-back-end a:hover, .to-back-end a.active {
   background-position: -230px -686px;
 }
 
-/* line 324, ../scss/index.scss */
+/* line 331, ../scss/index.scss */
 .to-front-end a {
   background-position: -25px -183px;
 }
-/* line 327, ../scss/index.scss */
+/* line 334, ../scss/index.scss */
 .to-front-end a:hover, .to-front-end a.active {
   background-position: -206px -578px;
 }
 
-/* line 332, ../scss/index.scss */
+/* line 339, ../scss/index.scss */
 .to-mobility a {
   background-position: -280px -686px;
 }
-/* line 335, ../scss/index.scss */
+/* line 342, ../scss/index.scss */
 .to-mobility a:hover, .to-mobility a.active {
   background-position: -281px -578px;
 }
 
-/* line 340, ../scss/index.scss */
+/* line 347, ../scss/index.scss */
 .to-contact a {
   background-position: -231px -578px;
 }
-/* line 343, ../scss/index.scss */
+/* line 350, ../scss/index.scss */
 .to-contact a:hover, .to-contact a.active {
   background-position: -256px -578px;
 }
@@ -247,26 +258,26 @@ a {
 /*------------------------------------*\
     $HEADER
 \*------------------------------------*/
-/* line 355, ../scss/index.scss */
+/* line 362, ../scss/index.scss */
 .header {
   background-color: #f2b701;
 }
 @media screen and (max-width: 1026px) {
-  /* line 355, ../scss/index.scss */
+  /* line 362, ../scss/index.scss */
   .header {
     height: 100%;
     min-height: 600px;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 355, ../scss/index.scss */
+  /* line 362, ../scss/index.scss */
   .header {
     height: auto;
     min-height: 0;
   }
 }
 
-/* line 370, ../scss/index.scss */
+/* line 377, ../scss/index.scss */
 .logo {
   background-position: -204px -794px;
   height: 60px;
@@ -276,13 +287,13 @@ a {
   top: 40px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 370, ../scss/index.scss */
+  /* line 377, ../scss/index.scss */
   .logo {
     display: none;
   }
 }
 
-/* line 382, ../scss/index.scss */
+/* line 389, ../scss/index.scss */
 .follow-us {
   background-position: -305px -686px;
   height: 28px;
@@ -292,20 +303,20 @@ a {
   bottom: 40px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 382, ../scss/index.scss */
+  /* line 389, ../scss/index.scss */
   .follow-us {
     display: none;
   }
 }
 
-/* line 394, ../scss/index.scss */
+/* line 401, ../scss/index.scss */
 .header-main {
   height: 250px;
   text-align: center;
   color: #222;
 }
 @media screen and (max-width: 1026px) {
-  /* line 394, ../scss/index.scss */
+  /* line 401, ../scss/index.scss */
   .header-main {
     width: 90%;
     height: auto;
@@ -314,14 +325,14 @@ a {
   }
 }
 @media screen and (max-width: 1026px) {
-  /* line 394, ../scss/index.scss */
+  /* line 401, ../scss/index.scss */
   .header-main {
     height: 270px;
     position: absolute;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 394, ../scss/index.scss */
+  /* line 401, ../scss/index.scss */
   .header-main {
     position: static;
     height: auto;
@@ -329,40 +340,40 @@ a {
   }
 }
 
-/* line 412, ../scss/index.scss */
+/* line 419, ../scss/index.scss */
 .header-main h1 {
   line-height: 1.5;
-  font-family: 'impact';
+  font-family: Impact, sans-serif;
   font-size: 100px;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1026px) {
-  /* line 412, ../scss/index.scss */
+  /* line 419, ../scss/index.scss */
   .header-main h1 {
     font-size: 10rem;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 412, ../scss/index.scss */
+  /* line 419, ../scss/index.scss */
   .header-main h1 {
     line-height: 1.2;
   }
 }
 
-/* line 427, ../scss/index.scss */
+/* line 434, ../scss/index.scss */
 .header-main h2 {
   font-family: 'Microsoft YaHei';
   font-size: 38px;
   font-weight: bold;
 }
 @media screen and (max-width: 1026px) {
-  /* line 427, ../scss/index.scss */
+  /* line 434, ../scss/index.scss */
   .header-main h2 {
     font-size: 4.8rem;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 427, ../scss/index.scss */
+  /* line 434, ../scss/index.scss */
   .header-main h2 {
     line-height: 1.2;
   }
@@ -371,17 +382,17 @@ a {
 /*------------------------------------*\
     $UI-DESIGN
 \*------------------------------------*/
-/* line 448, ../scss/index.scss */
+/* line 455, ../scss/index.scss */
 .ui-design {
   background-color: #e57d04;
 }
 
-/* line 453, ../scss/index.scss */
+/* line 460, ../scss/index.scss */
 .ui-design-main {
   height: 627px;
   background: right 10px url("../images/ui-design.png") no-repeat;
 }
-/* line 124, ../scss/index.scss */
+/* line 131, ../scss/index.scss */
 .ui-design-main h2 {
   background-position: -9999px -1600px;
   position: absolute;
@@ -390,7 +401,7 @@ a {
   font-size: 40px;
   color: #fff;
 }
-/* line 133, ../scss/index.scss */
+/* line 140, ../scss/index.scss */
 .ui-design-main h2 .sub-title {
   background-position: 0 -794px;
   height: 108px;
@@ -400,14 +411,14 @@ a {
   bottom: 10px;
   margin-left: 6px;
 }
-/* line 143, ../scss/index.scss */
+/* line 150, ../scss/index.scss */
 .ui-design-main .the-figure {
   position: absolute;
   right: 690px;
   top: 0;
 }
 @media screen and (max-width: 1026px) {
-  /* line 453, ../scss/index.scss */
+  /* line 460, ../scss/index.scss */
   .ui-design-main {
     width: 90%;
     height: auto;
@@ -415,7 +426,7 @@ a {
     margin-bottom: 30px;
     background-image: none;
   }
-  /* line 157, ../scss/index.scss */
+  /* line 164, ../scss/index.scss */
   .ui-design-main h2 {
     background-position: 0 -794px;
     height: 108px;
@@ -427,7 +438,7 @@ a {
     position: static;
     margin: 290px auto 60px;
   }
-  /* line 164, ../scss/index.scss */
+  /* line 171, ../scss/index.scss */
   .ui-design-main .the-figure {
     top: 56px;
     right: 0;
@@ -435,14 +446,14 @@ a {
     margin: 0 auto;
   }
 }
-/* line 456, ../scss/index.scss */
+/* line 463, ../scss/index.scss */
 .ui-design-main .the-figure {
   background-position: 0 -2625px;
   height: 596px;
   width: 359px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 461, ../scss/index.scss */
+  /* line 468, ../scss/index.scss */
   .ui-design-main .the-figure {
     background-position: -144px 0;
     height: 170px;
@@ -450,49 +461,49 @@ a {
   }
 }
 
-/* line 467, ../scss/index.scss */
+/* line 474, ../scss/index.scss */
 .ui-design-intro {
   left: 394px;
   top: 180px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 467, ../scss/index.scss */
+  /* line 474, ../scss/index.scss */
   .ui-design-intro {
     width: 100%;
     position: static;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
-/* line 471, ../scss/index.scss */
+/* line 478, ../scss/index.scss */
 .ui-design-requirement {
   border-color: #d24c0a;
   color: #fec99b;
 }
 @media screen and (max-width: 1026px) {
-  /* line 471, ../scss/index.scss */
+  /* line 478, ../scss/index.scss */
   .ui-design-requirement {
     width: auto;
     position: static;
     margin: 60px 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
-  /* line 236, ../scss/index.scss */
+  /* line 243, ../scss/index.scss */
   .ui-design-requirement h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 243, ../scss/index.scss */
+  /* line 250, ../scss/index.scss */
   .ui-design-requirement ul {
     padding-left: 0;
   }
-  /* line 247, ../scss/index.scss */
+  /* line 254, ../scss/index.scss */
   .ui-design-requirement ol {
     list-style-position: inside;
   }
-  /* line 251, ../scss/index.scss */
+  /* line 258, ../scss/index.scss */
   .ui-design-requirement ul > li:first-child {
     position: static;
   }
@@ -501,17 +512,17 @@ a {
 /*------------------------------------*\
     $BACK-END
 \*------------------------------------*/
-/* line 482, ../scss/index.scss */
+/* line 489, ../scss/index.scss */
 .back-end {
   background-color: #7c378a;
 }
 
-/* line 487, ../scss/index.scss */
+/* line 494, ../scss/index.scss */
 .back-end-main {
   height: 627px;
   background: right 10px url("../images/group-bg.png") no-repeat;
 }
-/* line 124, ../scss/index.scss */
+/* line 131, ../scss/index.scss */
 .back-end-main h2 {
   background-position: -9999px -1421px;
   position: absolute;
@@ -520,7 +531,7 @@ a {
   font-size: 40px;
   color: #fff;
 }
-/* line 133, ../scss/index.scss */
+/* line 140, ../scss/index.scss */
 .back-end-main h2 .sub-title {
   background-position: 0 -686px;
   height: 108px;
@@ -530,14 +541,14 @@ a {
   bottom: 10px;
   margin-left: 6px;
 }
-/* line 143, ../scss/index.scss */
+/* line 150, ../scss/index.scss */
 .back-end-main .the-figure {
   position: absolute;
   right: 690px;
   top: 0;
 }
 @media screen and (max-width: 1026px) {
-  /* line 487, ../scss/index.scss */
+  /* line 494, ../scss/index.scss */
   .back-end-main {
     width: 90%;
     height: auto;
@@ -545,7 +556,7 @@ a {
     margin-bottom: 30px;
     background-image: none;
   }
-  /* line 157, ../scss/index.scss */
+  /* line 164, ../scss/index.scss */
   .back-end-main h2 {
     background-position: 0 -686px;
     height: 108px;
@@ -557,7 +568,7 @@ a {
     position: static;
     margin: 290px auto 60px;
   }
-  /* line 164, ../scss/index.scss */
+  /* line 171, ../scss/index.scss */
   .back-end-main .the-figure {
     top: 56px;
     right: 0;
@@ -565,14 +576,14 @@ a {
     margin: 0 auto;
   }
 }
-/* line 490, ../scss/index.scss */
+/* line 497, ../scss/index.scss */
 .back-end-main .the-figure {
   background-position: 0 -2036px;
   height: 589px;
   width: 311px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 495, ../scss/index.scss */
+  /* line 502, ../scss/index.scss */
   .back-end-main .the-figure {
     background-position: -247px 0;
     height: 183px;
@@ -580,49 +591,49 @@ a {
   }
 }
 
-/* line 501, ../scss/index.scss */
+/* line 508, ../scss/index.scss */
 .back-end-intro {
   left: 394px;
   top: 180px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 501, ../scss/index.scss */
+  /* line 508, ../scss/index.scss */
   .back-end-intro {
     width: 100%;
     position: static;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
-/* line 505, ../scss/index.scss */
+/* line 512, ../scss/index.scss */
 .back-end-requirement {
   border-color: #3d1b48;
   color: #b981d1;
 }
 @media screen and (max-width: 1026px) {
-  /* line 505, ../scss/index.scss */
+  /* line 512, ../scss/index.scss */
   .back-end-requirement {
     width: auto;
     position: static;
     margin: 60px 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
-  /* line 236, ../scss/index.scss */
+  /* line 243, ../scss/index.scss */
   .back-end-requirement h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 243, ../scss/index.scss */
+  /* line 250, ../scss/index.scss */
   .back-end-requirement ul {
     padding-left: 0;
   }
-  /* line 247, ../scss/index.scss */
+  /* line 254, ../scss/index.scss */
   .back-end-requirement ol {
     list-style-position: inside;
   }
-  /* line 251, ../scss/index.scss */
+  /* line 258, ../scss/index.scss */
   .back-end-requirement ul > li:first-child {
     position: static;
   }
@@ -631,17 +642,17 @@ a {
 /*------------------------------------*\
     $FRONT-END
 \*------------------------------------*/
-/* line 516, ../scss/index.scss */
+/* line 523, ../scss/index.scss */
 .front-end {
   background-color: #3465aa;
 }
 
-/* line 521, ../scss/index.scss */
+/* line 528, ../scss/index.scss */
 .front-end-main {
   height: 627px;
   background: right 10px url("../images/group-bg.png") no-repeat;
 }
-/* line 124, ../scss/index.scss */
+/* line 131, ../scss/index.scss */
 .front-end-main h2 {
   background-position: -9999px -1246px;
   position: absolute;
@@ -650,7 +661,7 @@ a {
   font-size: 40px;
   color: #fff;
 }
-/* line 133, ../scss/index.scss */
+/* line 140, ../scss/index.scss */
 .front-end-main h2 .sub-title {
   background-position: 0 -578px;
   height: 108px;
@@ -660,14 +671,14 @@ a {
   bottom: 10px;
   margin-left: 6px;
 }
-/* line 143, ../scss/index.scss */
+/* line 150, ../scss/index.scss */
 .front-end-main .the-figure {
   position: absolute;
   right: 690px;
   top: 0;
 }
 @media screen and (max-width: 1026px) {
-  /* line 521, ../scss/index.scss */
+  /* line 528, ../scss/index.scss */
   .front-end-main {
     width: 90%;
     height: auto;
@@ -675,7 +686,7 @@ a {
     margin-bottom: 30px;
     background-image: none;
   }
-  /* line 157, ../scss/index.scss */
+  /* line 164, ../scss/index.scss */
   .front-end-main h2 {
     background-position: 0 -578px;
     height: 108px;
@@ -687,7 +698,7 @@ a {
     position: static;
     margin: 290px auto 60px;
   }
-  /* line 164, ../scss/index.scss */
+  /* line 171, ../scss/index.scss */
   .front-end-main .the-figure {
     top: 56px;
     right: 0;
@@ -695,14 +706,14 @@ a {
     margin: 0 auto;
   }
 }
-/* line 524, ../scss/index.scss */
+/* line 531, ../scss/index.scss */
 .front-end-main .the-figure {
   background-position: 0 -3833px;
   height: 626px;
   width: 254px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 529, ../scss/index.scss */
+  /* line 536, ../scss/index.scss */
   .front-end-main .the-figure {
     background-position: 0 0;
     height: 177px;
@@ -710,49 +721,49 @@ a {
   }
 }
 
-/* line 535, ../scss/index.scss */
+/* line 542, ../scss/index.scss */
 .front-end-intro {
   left: 394px;
   top: 180px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 535, ../scss/index.scss */
+  /* line 542, ../scss/index.scss */
   .front-end-intro {
     width: 100%;
     position: static;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
-/* line 539, ../scss/index.scss */
+/* line 546, ../scss/index.scss */
 .front-end-requirement {
   border-color: #193265;
   color: #7ca0c5;
 }
 @media screen and (max-width: 1026px) {
-  /* line 539, ../scss/index.scss */
+  /* line 546, ../scss/index.scss */
   .front-end-requirement {
     width: auto;
     position: static;
     margin: 60px 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
-  /* line 236, ../scss/index.scss */
+  /* line 243, ../scss/index.scss */
   .front-end-requirement h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 243, ../scss/index.scss */
+  /* line 250, ../scss/index.scss */
   .front-end-requirement ul {
     padding-left: 0;
   }
-  /* line 247, ../scss/index.scss */
+  /* line 254, ../scss/index.scss */
   .front-end-requirement ol {
     list-style-position: inside;
   }
-  /* line 251, ../scss/index.scss */
+  /* line 258, ../scss/index.scss */
   .front-end-requirement ul > li:first-child {
     position: static;
   }
@@ -761,17 +772,17 @@ a {
 /*------------------------------------*\
     $MOBILITY
 \*------------------------------------*/
-/* line 550, ../scss/index.scss */
+/* line 557, ../scss/index.scss */
 .mobility {
   background-color: #09a275;
 }
 
-/* line 555, ../scss/index.scss */
+/* line 562, ../scss/index.scss */
 .mobility-main {
   height: 627px;
   background: right 10px url("../images/group-bg.png") no-repeat;
 }
-/* line 124, ../scss/index.scss */
+/* line 131, ../scss/index.scss */
 .mobility-main h2 {
   background-position: -9999px -1780px;
   position: absolute;
@@ -780,7 +791,7 @@ a {
   font-size: 40px;
   color: #fff;
 }
-/* line 133, ../scss/index.scss */
+/* line 140, ../scss/index.scss */
 .mobility-main h2 .sub-title {
   background-position: 0 -902px;
   height: 109px;
@@ -790,14 +801,14 @@ a {
   bottom: 10px;
   margin-left: 6px;
 }
-/* line 143, ../scss/index.scss */
+/* line 150, ../scss/index.scss */
 .mobility-main .the-figure {
   position: absolute;
   right: 690px;
   top: 0;
 }
 @media screen and (max-width: 1026px) {
-  /* line 555, ../scss/index.scss */
+  /* line 562, ../scss/index.scss */
   .mobility-main {
     width: 90%;
     height: auto;
@@ -805,7 +816,7 @@ a {
     margin-bottom: 30px;
     background-image: none;
   }
-  /* line 157, ../scss/index.scss */
+  /* line 164, ../scss/index.scss */
   .mobility-main h2 {
     background-position: 0 -902px;
     height: 109px;
@@ -817,7 +828,7 @@ a {
     position: static;
     margin: 290px auto 60px;
   }
-  /* line 164, ../scss/index.scss */
+  /* line 171, ../scss/index.scss */
   .mobility-main .the-figure {
     top: 56px;
     right: 0;
@@ -825,14 +836,14 @@ a {
     margin: 0 auto;
   }
 }
-/* line 558, ../scss/index.scss */
+/* line 565, ../scss/index.scss */
 .mobility-main .the-figure {
   background-position: 0 -3221px;
   height: 612px;
   width: 253px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 563, ../scss/index.scss */
+  /* line 570, ../scss/index.scss */
   .mobility-main .the-figure {
     background-position: -71px 0;
     height: 178px;
@@ -840,49 +851,49 @@ a {
   }
 }
 
-/* line 569, ../scss/index.scss */
+/* line 576, ../scss/index.scss */
 .mobility-intro {
   left: 394px;
   top: 180px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 569, ../scss/index.scss */
+  /* line 576, ../scss/index.scss */
   .mobility-intro {
     width: 100%;
     position: static;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
-/* line 573, ../scss/index.scss */
+/* line 580, ../scss/index.scss */
 .mobility-requirement {
   border-color: #045e39;
   color: #6ccdb3;
 }
 @media screen and (max-width: 1026px) {
-  /* line 573, ../scss/index.scss */
+  /* line 580, ../scss/index.scss */
   .mobility-requirement {
     width: auto;
     position: static;
     margin: 60px 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
-  /* line 236, ../scss/index.scss */
+  /* line 243, ../scss/index.scss */
   .mobility-requirement h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 670px) {
-  /* line 243, ../scss/index.scss */
+  /* line 250, ../scss/index.scss */
   .mobility-requirement ul {
     padding-left: 0;
   }
-  /* line 247, ../scss/index.scss */
+  /* line 254, ../scss/index.scss */
   .mobility-requirement ol {
     list-style-position: inside;
   }
-  /* line 251, ../scss/index.scss */
+  /* line 258, ../scss/index.scss */
   .mobility-requirement ul > li:first-child {
     position: static;
   }
@@ -891,18 +902,18 @@ a {
 /*------------------------------------*\
     $CONTACT
 \*------------------------------------*/
-/* line 584, ../scss/index.scss */
+/* line 591, ../scss/index.scss */
 .contact {
   background: left bottom #7cb854 url("../images/contact-bg.png") repeat-x;
 }
 @media screen and (max-width: 1026px) {
-  /* line 584, ../scss/index.scss */
+  /* line 591, ../scss/index.scss */
   .contact {
     background-image: none;
   }
 }
 
-/* line 593, ../scss/index.scss */
+/* line 600, ../scss/index.scss */
 .contact-main {
   height: 434px;
   width: 961px;
@@ -912,7 +923,7 @@ a {
   top: 78px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 593, ../scss/index.scss */
+  /* line 600, ../scss/index.scss */
   .contact-main {
     width: 90%;
     height: auto;
@@ -920,10 +931,10 @@ a {
     background-image: none;
   }
 }
-/* line 601, ../scss/index.scss */
+/* line 608, ../scss/index.scss */
 .contact-main h2 {
   line-height: 1em;
-  font-family: 'impact';
+  font-family: Impact, sans-serif;
   font-size: 60px;
   text-align: center;
   text-transform: uppercase;
@@ -931,12 +942,12 @@ a {
   left: 71px;
   top: 47px;
 }
-/* line 611, ../scss/index.scss */
+/* line 618, ../scss/index.scss */
 .contact-main h2 .title-break {
   display: block;
 }
 @media screen and (max-width: 1026px) {
-  /* line 593, ../scss/index.scss */
+  /* line 600, ../scss/index.scss */
   .contact-main {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -948,7 +959,7 @@ a {
     margin: 60px auto 200px;
     padding: 40px 0;
   }
-  /* line 625, ../scss/index.scss */
+  /* line 632, ../scss/index.scss */
   .contact-main h2 {
     position: static;
     margin: 0 auto;
@@ -957,22 +968,22 @@ a {
   }
 }
 
-/* line 634, ../scss/index.scss */
+/* line 641, ../scss/index.scss */
 .vtmer-intro {
   left: 360px;
   top: 48px;
   color: #f3bb01;
 }
 @media screen and (max-width: 1026px) {
-  /* line 634, ../scss/index.scss */
+  /* line 641, ../scss/index.scss */
   .vtmer-intro {
     width: 100%;
     position: static;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
-/* line 639, ../scss/index.scss */
+/* line 646, ../scss/index.scss */
 .about-us {
   position: absolute;
   left: 72px;
@@ -980,18 +991,18 @@ a {
   font-size: 13px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 639, ../scss/index.scss */
+  /* line 646, ../scss/index.scss */
   .about-us {
     display: none;
   }
 }
 
-/* line 650, ../scss/index.scss */
+/* line 657, ../scss/index.scss */
 .about-us a {
   color: #f3bb01;
 }
 
-/* line 654, ../scss/index.scss */
+/* line 661, ../scss/index.scss */
 .form-download {
   background-position: -185px -183px;
   height: 74px;
@@ -1000,18 +1011,18 @@ a {
   left: 360px;
   bottom: 42px;
 }
-/* line 661, ../scss/index.scss */
+/* line 668, ../scss/index.scss */
 .form-download:hover {
   background-position: -168px -1962px;
 }
-/* line 665, ../scss/index.scss */
+/* line 672, ../scss/index.scss */
 .form-download:active {
   background-position: 0 -1962px;
   height: 70px;
   width: 168px;
 }
 @media screen and (max-width: 1026px) {
-  /* line 654, ../scss/index.scss */
+  /* line 661, ../scss/index.scss */
   .form-download {
     left: 0;
     right: 0;
@@ -1020,7 +1031,7 @@ a {
   }
 }
 
-/* line 686, ../scss/index.scss */
+/* line 693, ../scss/index.scss */
 .figure {
   display: none;
   width: 961px;
@@ -1030,88 +1041,88 @@ a {
   bottom: 26px;
   margin: 0 auto;
 }
-/* line 695, ../scss/index.scss */
+/* line 702, ../scss/index.scss */
 .figure li {
   position: absolute;
   bottom: 0;
 }
 @media screen and (min-height: 768px) {
-  /* line 686, ../scss/index.scss */
+  /* line 693, ../scss/index.scss */
   .figure {
     display: block;
   }
 }
-@media screen and (min-width: 1026px) {
-  /* line 686, ../scss/index.scss */
+@media screen and (max-width: 1026px) {
+  /* line 693, ../scss/index.scss */
   .figure {
     display: none;
   }
 }
 
-/* line 713, ../scss/index.scss */
+/* line 720, ../scss/index.scss */
 .ui-design-figure {
   left: 0;
 }
-/* line 716, ../scss/index.scss */
+/* line 723, ../scss/index.scss */
 .ui-design-figure a {
   background-position: -144px 0;
   height: 170px;
   width: 103px;
   left: 0;
 }
-/* line 720, ../scss/index.scss */
+/* line 727, ../scss/index.scss */
 .ui-design-figure a:hover {
   background-position: 0 -378px;
   height: 189px;
   width: 157px;
 }
 
-/* line 726, ../scss/index.scss */
+/* line 733, ../scss/index.scss */
 .back-end-figure {
   left: 284px;
 }
-/* line 729, ../scss/index.scss */
+/* line 736, ../scss/index.scss */
 .back-end-figure a {
   background-position: -247px 0;
   height: 183px;
   width: 97px;
 }
-/* line 732, ../scss/index.scss */
+/* line 739, ../scss/index.scss */
 .back-end-figure a:hover {
   background-position: -157px -378px;
   height: 200px;
   width: 148px;
 }
 
-/* line 738, ../scss/index.scss */
+/* line 745, ../scss/index.scss */
 .front-end-figure {
   left: 604px;
 }
-/* line 741, ../scss/index.scss */
+/* line 748, ../scss/index.scss */
 .front-end-figure a {
   background-position: 0 0;
   height: 177px;
   width: 71px;
   right: 80px;
 }
-/* line 745, ../scss/index.scss */
+/* line 752, ../scss/index.scss */
 .front-end-figure a:hover {
   background-position: -206px -902px;
   height: 195px;
   width: 133px;
 }
 
-/* line 751, ../scss/index.scss */
+/* line 758, ../scss/index.scss */
 .mobility-figure {
   left: 890px;
 }
-/* line 754, ../scss/index.scss */
+/* line 761, ../scss/index.scss */
 .mobility-figure a {
   background-position: -71px 0;
   height: 178px;
   width: 73px;
 }
-/* line 757, ../scss/index.scss */
+/* line 764, ../scss/index.scss */
 .mobility-figure a:hover {
   background-position: -50px -183px;
   height: 195px;
