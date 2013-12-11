@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		
+
 		htmlmin: {
 			build: {
 				options: {
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 					dest: '<%= yeoman.app %>/scripts/',
 					ext: '.js'
 				}, {
-					'<%= yeoman.app %>/scripts/require.js': 
+					'<%= yeoman.app %>/scripts/require.js':
 					'<%= yeoman.app %>/bower_components/requirejs/require.js'
 				}, {
 					expand: true,
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 					dest: '<%= yeoman.app %>/styles/',
 					ext: '.css'
 				}, {
-					'<%= yeoman.app %>/scripts/modernizr.js': 
+					'<%= yeoman.app %>/scripts/modernizr.js':
 					'<%= yeoman.app %>/bower_components/modernizr/modernizr.js'
 				}, {
 					expand: true,
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
 					src: '*.scss',
 					dest: '<%= yeoman.app %>/scss/'
 				}, {
-					'<%= yeoman.app %>/styles/normalize.css': 
+					'<%= yeoman.app %>/styles/normalize.css':
 					'<%= yeoman.app %>/bower_components/normalize-css/normalize.css'
 				}]
 			},
@@ -115,7 +115,15 @@ module.exports = function(grunt) {
 					],
 					dest: '<%= yeoman.dist %>'
 				}]
-			}
+			},
+            publish: {
+                files: [{
+                    cwd: '<%= yeoman.dist %>',
+                    expand: true,
+                    src: ['**'],
+                    dest: './'
+                }]
+            }
 		},
 
 		// sass: {
@@ -199,13 +207,13 @@ module.exports = function(grunt) {
             },
 			server: [
 				'connect',
-				'watch', 
+				'watch',
 				'compass:server'
 			],
 			build: [
-				'uglify', 
-				// 'sass:compressed', 
-				'compass:build', 
+				'uglify',
+				// 'sass:compressed',
+				'compass:build',
 				'htmlmin',
 				'copy:build'
 			]
@@ -225,7 +233,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['copy:init']);
 	grunt.registerTask('build', [
 		'clean:build',
-		'concurrent:build'
+		'concurrent:build',
+        'copy:publish'
 	]);
 	grunt.registerTask('server', [
 		'concurrent:server'
