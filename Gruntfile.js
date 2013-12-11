@@ -111,7 +111,7 @@ module.exports = function(grunt) {
 					cwd: '<%= yeoman.app %>',
 					src: [
 						'fonts/{,*/}*.*',
-						'images/{,*/}*.ico'
+						'images/*.{png, gif, icon, jpg, jpeg}'
 					],
 					dest: '<%= yeoman.dist %>'
 				}]
@@ -145,16 +145,16 @@ module.exports = function(grunt) {
 		// 	}
 		// },
 
-		imagemin: {
-			build: {
-				files: [{
-					expand: true,
-					cwd: '<%= yeoman.app %>/images',
-					src: '{,*/}*.{gif,jpeg,jpg,png}',
-					dest: '<%= yeoman.dist %>/images'
-				}]
-			}
-		},
+		// imagemin: {
+		// 	build: {
+		// 		files: [{
+		// 			expand: true,
+		// 			cwd: '<%= yeoman.app %>/images',
+		// 			src: '{,*/}*.{gif,jpeg,jpg,png}',
+		// 			dest: '<%= yeoman.dist %>/images'
+		// 		}]
+		// 	}
+		// },
 
 		clean: {
 			build: {
@@ -207,8 +207,7 @@ module.exports = function(grunt) {
 				// 'sass:compressed', 
 				'compass:build', 
 				'htmlmin',
-				'copy:build',
-				'imagemin'
+				'copy:build'
 			]
 		}
 	});
@@ -218,7 +217,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	// grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-concurrent');
