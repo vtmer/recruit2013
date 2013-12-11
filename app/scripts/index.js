@@ -1,7 +1,7 @@
 (function($) {
 
     // 当所有内容准备完毕才允许运行js
-    $(window).ready(function() {
+    $(window).load(function() {
         
         // 去除no-js类名，js运行成功
         $('html').removeClass('no-js');
